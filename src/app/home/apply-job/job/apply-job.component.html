@@ -1,0 +1,102 @@
+<div mat-dialog-content style="max-height: 50vh">
+    <div class="modal-header">
+
+        <h4 class="modal-title">Step(1/2)<span>: Basic Information</span></h4>
+        <button type="button" class="close" (click)="closeDialog()" data-dismiss="modal">&times;</button>
+    </div>
+    <!-- <span class="poupcross"><i class="fa fa-times" (click)="closeDialog()"></i></span> -->
+    <div class="apply-job">
+        <h2></h2>
+        <div class="dropdown-divider"></div>
+        <form [formGroup]="applyJobForm">
+            <div class="row  mt-4">
+                <div class="col-sm-6">
+                    <div class="form-row">
+                        <div class="form-group col-md-6 col-6">
+                            <label for="inputEmail4">Name <span class="spn">*</span></label>
+                            <input type="text" class="form-control" placeholder="First Name"
+                                formControlName="first_name"
+                                [ngClass]="{ 'is-invalid': submitted && formControls.first_name.errors }">
+                        </div>
+                        <div class="form-group col-md-6 col-6">
+                            <input type="text" class="form-control mt-37" placeholder="Last Name"
+                                formControlName="last_name"
+                                [ngClass]="{ 'is-invalid': submitted && formControls.last_name.errors }">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Contact Email <span class="spn">*</span></label>
+                        <input type="email" class="form-control" placeholder="Email Id" formControlName="email"
+                            [ngClass]="{ 'is-invalid': submitted && formControls.email.errors }">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress2">Contact Number <span class="spn">*</span></label>
+                        <input type="text" class="form-control" formControlName="mobile" maxlength="10"
+                            (keypress)=_keyPress($event)
+                            [ngClass]="{ 'is-invalid': submitted && formControls.mobile.errors }">
+                        <!-- <mat-error *ngIf="applyJobForm.get('mobile').hasError('required')">
+                            Please fill out this field.
+                        </mat-error> -->
+                        <mat-error *ngIf="applyJobForm.get('mobile').hasError('pattern')">
+                            please enter valid mobile number .
+                        </mat-error>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <h6>Select Existing Resume: <span class="spn">*</span></h6>
+                    <div class="existing-resume-section" id="style-2">
+                        <div class="existing-resume">
+                            <h5>{{resumes}}</h5>
+                            <!-- <h6>2018.01.23</h6> -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="file btn btn-file">
+                            Upload New Resume
+                            <input type="file" class="file-1" #imagedata style="display:none"
+                                (change)="handleFileInput($event, 'd')" />
+                            <button type="button" (click)="imagedata.click()" class="file-1">Upload New Resume</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="referalcode">Referral Code
+                        </label>
+                        <span class="tooltip">
+                            <img src="./../../../../assets/img/check-icon.png" alt="..">
+                            <div class="tooltiptext">
+                                Did your friend referred this
+                                job to you? Write down his/her referral code here. When you get hired, your friend earns
+                                a referral reward!
+                            </div>
+                        </span>
+                        <!-- disabled case if referral code coming from backend -->
+                        <div *ngIf="jobrefferal">
+                            <input type="text" class="form-control" formControlName="referCode"
+                                [(ngModel)]="referredCode" placeholder="Refer Code"
+                                [ngClass]="{'isValid':validReferral}" (keyup)="toValidateReferCode()"
+                                oninput="this.value=this.value.toUpperCase()">
+
+                        </div>
+                        <!-- -------------------------------------------------------- -->
+                        <div *ngIf="jobrefferal==''">
+                            <input type="text" class="form-control" formControlName="referCode" placeholder="Refer Code"
+                                [ngClass]="{'isValid':validReferral}" (keyup)="toValidateReferCode()"
+                                oninput="this.value=this.value.toUpperCase()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row mt-4">
+                <div class="col-sm-12 text-right">
+                    <a class="btn btn-cancel dis-none" (click)="closeDialog()">Cancel</a>
+                    <a class="btn btn-confirm btn-contact" (click)="applyJobFormData()">Confirm</a>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="btn btn-confirm btn-contact" (click)="continueNextlevel()">Continue</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<section class="header fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <!-- <a *ngIf="isLoggedIn==false" class="navbar-brand" routerLink='/'>
+                <img class="navbar-brand-img" src="./../../../assets/img/logo.png" alt="..">
+            </a> -->
+            <a class="navbar-brand" href='/home-page'>
+                <img class="navbar-brand-img" src="./../../../assets/img/logo.png" alt="..">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+              <i class="fa fa-bars"></i>
+          </span>
+
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <span class="navbar-close" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-times"></i> </span>
+                <ul class="navbar-nav mr-auto">
+                    <li *ngIf="!isLoggedIn" class="nav-item empl-zone">
+                        <a class="nav-link" (click)="loginDialog()">Login / Signup for Free</a>
+                    </li>
+                    <li *ngIf="isLoggedIn" class="empl-zone">
+                        <a class="nav-link" routerLink="/myprofile-info">My Info</a></li>
+
+                    <div class="dropdown-divider"></div>
+                    <li class="nav-item">
+                        <a class="nav-link" style="cursor: pointer" (click)="routeTOSearchPage()">Search Jobs </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink='/International-Jobs'>International Jobs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink='/referral'>Refer & Earn</a>
+                    </li>
+                    <li class="nav-item mbl-nav-item">
+                        <a class="nav-link" routerLink="/about-us">About Jobket</a>
+                    </li>
+                    <li class="nav-item mbl-nav-item">
+                        <a class="nav-link" routerLink="/faq">FAQ</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" routerLink="/about-us">About Jobket</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/faq">FAQ</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://blog.jobket.in/">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/contact-us">Contact us</a>
+                    </li>
+                    <div class="dropdown-divider"></div>
+                    <li class="nav-item empl-zone">
+                        <a class="nav-link" target="_blank" href="https://recruit.jobket.in/home">For Employer Zone</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="login empl">
+                <ul *ngIf="!isLoggedIn" class="dis-none ">
+                    <li><a (click)="loginDialog()">Login</a></li>
+                    <a (click)="signUpDialog()" class="btn btn-login">Sign up for Free</a>
+                </ul>
+
+                <a target="_blank" href="https://recruit.jobket.in/home" class="btn btn-theme ">For Employer Zone</a>
+                <ul *ngIf="isLoggedIn" class="dis-none">
+                    <li><a routerLink="/myprofile-info"><i class="fa fa-user"></i>My Info</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="login login-mbl">
+            <ul>
+                <li>
+                    <a routerLink='/search-jobs'>Search Jobs</a>
+                </li>
+            </ul>
+
+            <ul *ngIf="!isLoggedIn">
+                <li class="btn btn-login">
+                    <a (click)="signUpDialog()">Sign up </a>/
+                    <a (click)="loginDialog()">Login</a>
+                </li>
+            </ul>
+            <ul *ngIf="isLoggedIn">
+                <li>
+                    <a routerLink="/myprofile-info">
+                        <img class="header-profile-image" src="./../../../assets/img/blank-profile.png" alt="..">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

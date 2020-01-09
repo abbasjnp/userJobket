@@ -1,0 +1,160 @@
+<section class="search-jobs-1">
+    <div class="container">
+        <div class="card vdo">
+            <div class="">
+                <div class="home-search-box">
+                    <div class="row ">
+                        <div class="col-md-12 ">
+                            <form>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div (click)="searchJobDesignation(searchItem.value)" class="input-group-text">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                    </div>
+                                    <!-- <input #searchItem (keyup.enter)="searchJobDesignation(searchItem.value,'itemFromSearchPage')" (blur)="searchItem.value=searchJobDesignation(searchItem.value);" type="text" class="form-control" placeholder="Search By Designation or Location"> -->
+                                    <input #searchItem [(ngModel)]="searchKeyWords" name="keyword"  (keyup.enter)="searchJobDesignation(searchItem.value,'itemFromSearchPage')"  type="text" class="form-control" placeholder="Search By Designation or Skills">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="search-jobs ">
+    <div class="container">
+        <div class="card vdo ">
+            <div class="card-body">
+
+                <div class="row">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item" [ngClass]="category?.name?'active1':'active2'"><a (click)="breadCrumbAll()">All </a></li>
+                            <li class="breadcrumb-item" [ngClass]="{'active2':activeClass}" *ngIf="showCategory"><a (click)="breadCrumbCategory(category)">{{category.name}} </a></li>
+                            <li class="breadcrumb-item active" *ngIf="showSubcategory" ><a>{{subcategory.name}}</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <owl-carousel *ngIf="!subcatoryNavs" [options]="carouselOptions" [items]="navs" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                            <div class="item" *ngFor="let nav of navs; let i= index">
+                                <div class="slide-text">
+                                    <a [ngClass]="{'active2':nav.ischecked}" (click)="getSubCategoryData(nav,i)">
+                                        {{nav.name}}
+                                    </a>
+                                </div>
+                            </div>
+                        </owl-carousel>
+                        <owl-carousel *ngIf="subcatoryNavs" [options]="carouselOptions" [items]="subcatoryNavs" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                            <div class="item" *ngFor="let subNav of subcatoryNavs; let i= index">
+                                <div class="slide-text">
+                                    <a [ngClass]="{'active2':subNav.ischecked}" (click)="getSubCategoryList(subNav,i)">
+                                     {{subNav.name}}
+                                    </a>
+                                </div>
+                            </div>
+                        </owl-carousel>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="jobs">
+    <div class="container">
+        <div class="vdo">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="btn btn-filter" (click)="filterDialog()"><i class="fa fa-filter"></i> Filters</a>
+                    <!-- <p *ngIf="jobsList.length==0">No job is available in this category !!!!</p> -->
+                </div>
+            </div>
+        </div>
+        <div (click)="job_Designation_router(job.job_id,job.designation,job.company_logo,job)" class="card job-box" *ngFor="let job of jobsList; let i = index">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-7 col-7">
+
+                        <h3><a>{{job.designation}}
+                                <span class="fa fa-check-circle tooltip">
+                                        <span class="tooltiptext">verified job</span>
+                                     </span> 
+                        </a></h3>
+
+                        <!--   <h3><a [routerLink]="'/job-detail/' +[job.job_id]">{{job.designation}}</a></h3> -->
+
+                        <h4 class="inline">{{job.company_name}}</h4>
+                        <h6 class="inline"><span>|</span>{{job.posted_at}}</h6>
+                    </div>
+                    <div class="col-sm-5 col-5">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="rewards">
+                                    <h4>Joining Bonus</h4>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="rewards1">
+                                    <h4>Rs. {{job.hiring_reward}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="rewards">
+                                    <h4>Referral Reward</h4>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="rewards1">
+                                    <h4>Rs. {{job.referral_reward}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-10">
+                        <span class="briefcase">
+                <i class="fa fa-briefcase"></i>
+                <h4>{{job.experience}}</h4>
+              </span>
+                        <span class="location">
+                <i class="fa fa-map-marker"></i>
+                <h4>{{job.location}}</h4>
+              </span>
+              <div class="mob-btn">
+                <a class="btn btn-refer"> View Details</a>
+            </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-8 mt-10 dis-none">
+                        <!-- <p *ngIf="job.company_detail" class="text">{{job.company_detail | ellipsis: 100}} </p> -->
+                        <p *ngIf="job.company_detail" class="text" [innerHTML]="job.company_detail | ellipsis: 100"></p>
+
+                    </div>
+                    <div class="col-md-4">
+                        <div class="apply-now">
+                            <a class="btn btn-apply" *ngIf="job.applied_status ==false">Apply Now</a>
+                            <a class="btn btn-apply" *ngIf="job.applied_status ==true">Applied</a>
+                            
+                            <a class="btn btn-refer"> Refer Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="total_pages>count">
+            <button class="view-more" (click)="showMoreJobs()">
+        View more jobs
+      <!--   <a (click)="showMoreJobs()" *ngIf="total_pages<count">No more jobs</a> -->
+      </button>
+        </div>
+        <p *ngIf="!jobsLength"><b>No Result Found</b></p>
+    </div>
+</section>

@@ -1,0 +1,134 @@
+<section class="myprofile-section-top mt-50 brd">
+  <div class="container">
+      <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">My Status </a></li>
+            <i class="fa fa-chevron-right"></i>
+            <li class="breadcrumb-item  active" aria-current="page">
+              <div class="dropdown">
+              <div class="dropdown-toggle" data-toggle="dropdown">Apply Status
+                  <span class="caret"></span></div>     
+                <ul class="dropdown-menu">
+                  <li>My profile</li>
+                  <li><a routerLink="/myprofile-info/profile/personal">My personal Info  </a></li>
+                  <li><a routerLink="/myprofile-info/profile/resume">My Resume</a></li>
+                  <li>My Status</li>
+                  <li><a routerLink="/myprofile-info/my-status/apply-status">Apply Status</a></li>
+                  <li><a routerLink='/myprofile-info/my-status/referal-status'>Referral Status</a></li>
+                  <li><a routerLink='/myprofile-info/my-point'>My Point</a></li>
+                  <li><a routerLink='/change-password'>Change password</a></li>
+                  <li><a (click)="logout()"> Logout</a></li>
+                </ul>
+              </div>
+            </li>
+            </ol>
+        </nav>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="card vdo">
+      <div class="card-body">
+        
+           
+<div class="applied-companies">
+  <div class="row">
+    <div class="col-sm-12">                                            
+  <h2>Applied Companies</h2>
+</div>
+</div>
+<div class="row mt-5">
+<div class="col-sm-4 col-4">
+  <div class="Rectangle text-center">
+    <div class="bx-1">
+      <img src="./../../../assets/img/visitor.png" alt="..">
+    </div>
+    <h3>{{jobApplied}}</h3>
+    <p>Total Companies</p>
+  </div>
+</div>
+<div class="col-sm-4 col-4">
+  <div class="Rectangle text-center">
+      <div class="bx-2">
+          <img src="./../../../assets/img/flow-chart.png" alt="..">
+        </div>
+        <h3>{{onGoingProcess}}</h3>
+        <p>Ongoing Process</p>
+  </div>
+  </div>
+  <div class="col-sm-4 col-4">
+  <div class="Rectangle text-center">
+      <div class="bx-3">
+          <img src="./../../../assets/img/check.png" alt="..">
+        </div>
+        <h3>{{finalPass}}</h3>
+        <p>Final Process</p>
+  </div>
+    </div>
+</div>
+<div class="row mt-4">
+<div class="col-sm-12 details">
+  <h2>Details</h2>
+  <div class="form-group">
+      <select class="form-control"
+      (change)="filterData($event)">
+        <option value="" disabled selected >
+        Filter By Status
+        </option>
+        <option *ngFor="let status of filterByStatus" [value]="status">
+        {{status}}
+        </option>
+      </select>
+    </div>
+    <div class="detail-table">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Company Name</th>
+                <th scope="col">Status</th>
+                <th scope="col">Name of Referee</th>
+              </tr>
+            </thead>
+            <tbody 
+              *ngIf="!noData">
+              <tr *ngFor="let applyStatus of applyStatusData | paginate: { itemsPerPage: 1, currentPage: page, totalItems: totalPages*1 , id: 'apply'}">
+                <td> 
+                  {{applyStatus.company_name}}    
+                </td>
+                <td>
+                  {{applyStatus.status}}
+                </td>
+                <td>
+                  {{applyStatus.referral_name}}
+                </td>
+              </tr>
+            </tbody>
+            <tbody *ngIf="noData">
+              <tr>
+                 No Data Found
+              </tr>
+            </tbody>
+          </table>                                                  
+    </div>
+    
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6 offset-4">
+    <div class="">
+        <nav aria-label="Page navigation example">
+          <div class="pagination">
+             <pagination-controls (pageChange)="pageChange($event)" id="apply"
+             class="my-pagination">
+             </pagination-controls>
+             </div>
+          </nav>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</section>

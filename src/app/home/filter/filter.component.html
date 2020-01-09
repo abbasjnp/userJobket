@@ -1,0 +1,46 @@
+<div class="mat-dialog-container1">
+    <div class="cdk-overlay-pane1">
+        <div class="modal-header">
+            <button type="button" class="close hdbtn" (click)="refreshDialog()">
+          <img  src="./../../../assets/img/refresh.png" style="height: 16px" alt=".."> </button>
+            <p class="hdp">Reset Filters</p>
+            <button type="button" class="close" (click)="closeDialog()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Preferred Location</h4>
+                </div>
+                <div *ngFor="let loc of locations;let i=index" class="col-sm-3 col-6">
+                    <button [ngClass]="{'active1': loc.isClicked}" (click)="getLocation(loc.location,i);loc.isClicked = !loc.isClicked" class="btn btn-location active">
+                   {{loc.location}}
+              </button>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Salary Range</h4>
+                </div>
+                <div class="col-sm-12">
+                    <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+                    <p class="hdp-1">{{minValue}} LPA - {{maxValue}} + LPA</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h4>Experience Level</h4>
+                </div>
+                <div *ngFor="let exp of experience;let i=index" class="col-sm-3 col-6">
+                    <button [ngClass]="{'active1':exp.isClicked}" (click)="getExperince(exp,i);exp.isClicked = !exp.isClicked" class="btn btn-location">
+                    {{exp.expName}}
+                </button>
+                </div>
+            </div>
+            <div class="row">
+                <div (click)="applyFilter()" class="col-sm-12">
+                    <a class="btn btn-confirm btn-contact">Apply Filters</a>
+                </div>
+            </div>
+        </div>
+    </div>

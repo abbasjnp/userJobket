@@ -1,0 +1,208 @@
+.modal-title{
+  font-family: Poppins-bold;
+  font-size: 23px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.48;
+  letter-spacing: normal;
+  text-align: center;
+}
+.modal-header{
+  border: none;
+  padding-bottom: 0;
+}
+.fa-times{
+  color: #a5a5a5;
+  font-size: 18px;
+}
+.contact-content span p{
+     color:red;
+}
+.btn-deactivate:disabled{
+background:#979797;
+}
+.signup-sec-1 {
+margin-left: -24px;
+margin-top: -24px;
+border-radius: 6px 6px 0 0;
+box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.07);
+background-image: linear-gradient(to bottom, #f5a51b, #ea6812);
+height: 75vh;
+padding: 93px 22px;
+}
+.modal-body h3{
+  font-family: Poppins-SemiBold;
+font-size: 17px;
+font-weight: 600;
+font-stretch: normal;
+font-style: normal;
+line-height: 2.53;
+letter-spacing: normal;
+text-align: center;
+color: #000;
+margin-bottom: 29px;
+}
+.modal-body p{
+  font-family: Poppins-Light;
+font-size: 11px;
+font-weight: 300;
+font-stretch: normal;
+font-style: normal;
+line-height: 2.09;
+letter-spacing: normal;
+text-align: center;
+color: #979797;
+margin-bottom: 43px;
+}
+.modal-body img{
+  margin-bottom: 74px;
+}
+.login-logo-1 {
+  
+  padding: 0px 0px;
+  background-image: none;
+}
+.login-logo-1 h2{
+  font-family: poppins-bold;
+  font-size: 23px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.48;
+  letter-spacing: normal;
+  text-align: center;
+}
+.login-logo-1 img{
+  margin-bottom: 30px;
+}
+.min-ht{
+  min-height: 300px;
+}
+::placeholder {
+  font-family: Poppins-Light;
+font-size: 11px;
+font-weight: 300;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.55;
+letter-spacing: 0.26px;
+text-align: left;
+color: #949494;
+}
+
+:-ms-input-placeholder { 
+  font-family: Poppins-Light;
+  font-size: 11px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: 0.26px;
+  text-align: left;
+  color: #949494;
+}
+
+::-ms-input-placeholder { 
+  font-family: Poppins-Light;
+  font-size: 11px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: 0.26px;
+  text-align: left;
+  color: #949494;
+}
+.login-sec-1 span {
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: normal;
+  color: #e74203;
+  float: right;
+  font-family: Poppins-Medium;
+  margin-top: 0;
+  margin-left: 0px;
+}
+.btn-email {
+  width: 100%;
+  padding: 6px 0;
+  border-radius: 25px;
+  background-color:#19864b;
+  color: #fff;
+  font-family: Poppins-Medium;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+// .............alert............
+.alert{
+  padding: 0px;
+}
+.alert h5{
+  font-size: 11px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.55;
+letter-spacing: normal;
+text-align: left;
+font-family: Poppins-Regular;
+color: #000;
+}
+.alert p{
+  font-family: Poppins-Regular;
+font-size: 11px;
+font-weight: normal;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.55;
+letter-spacing: normal;
+text-align: left;
+color: #000;
+margin-bottom: 0;
+}
+.btn-cancel1{
+  width: 84px;
+height: 31px;
+border-radius: 17.5px;
+border: solid 1px #979797;
+font-family: Poppins-Medium;
+font-size: 11px;
+font-weight: 500;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.55;
+letter-spacing: normal;
+text-align: center;
+color: #000 ;
+margin: 0 10px 0 0;
+background-color: #ffffff;
+}
+
+.btn-confirm1{
+  width: 84px;
+height: 31px;
+border-radius: 17.5px;
+background-color:#19864b;
+font-family: Poppins-Medium;
+font-size: 11px;
+font-weight: 500;
+font-stretch: normal;
+font-style: normal;
+line-height: 1.55;
+letter-spacing: normal;
+text-align: center;
+color: #ffffff;
+}
+.btngrp{
+  float: right;
+  padding: 7px 0;
+}
+
+@media screen and (max-width:767px){
+  
+}

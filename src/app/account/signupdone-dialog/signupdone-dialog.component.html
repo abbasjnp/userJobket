@@ -1,0 +1,60 @@
+<div class="signup-done">
+  <div mat-dialog-content>
+    <div class="modal-header">
+      <h4 class="modal-title">Sign-up done!</h4>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-2">
+          <div>
+            <img src="./../../../assets/img/icon-w.png" alt="..">
+          </div>
+        </div>
+        <div class="col-10 pdlr">
+          <p>With your preference checked, Jobket provides customised job recommendations.</p>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-sm-12 mt-13 d-flex justify-content-between">
+          <h3>FUNCTIONAL PREFERENCE</h3>
+          <span class="">(Optional)</span>
+        </div>
+        <div class="col-4 pdl pdr mt-10 mb-7" *ngFor="let pre of funtionalPreferrecne;let i= index">
+         <a> <div class="bt pd-8" [ngClass]="{'active1':pre.isClicked}" (click)="selectPreferrences(pre.name,i);">
+            {{pre.name}}
+          </div>
+        </a>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-sm-12 mt-13 d-flex justify-content-between">
+          <h3>LOCATIONAL PREFERENCE</h3>
+          <span class="">(Optional)</span>
+        </div>
+        <div class="col-4 pdl pdr mt-10 mb-7" *ngFor="let loc of locations;let i=index" >
+         <a> <div class="bt pd-8" [ngClass]="{'active1': loc.isClicked}" (click)="getLocation(loc.location,i)">
+            {{loc.location}}
+          </div></a>
+        </div>
+      
+      </div>
+
+      <div class="row mt-13">
+        <div class="col-sm-12">
+          <div class="form-group checkbox">
+            <input id="checkbox1" class="styled" [(ngModel)]="checked" type="checkbox" name="remember">
+            <label class="form-check-label">
+              Click the box to continue receiving important information including customized job recommendations
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <button type="submit" (click)="submit()" class="btn btn-login-green">Done</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

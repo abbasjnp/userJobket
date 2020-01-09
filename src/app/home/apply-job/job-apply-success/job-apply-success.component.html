@@ -1,0 +1,80 @@
+<div mat-dialog-content>
+    <div class="job-apply-success">
+        <div class="row">
+            <div class="col-md-12 col-12 text-center">
+                <h4>Thank You!</h4>
+                <p>Your Apply has been successfully done.</p>
+            </div>
+        </div>
+    </div>
+    <div id="style-2" class="job-apply-1">
+        <div *ngFor="let job of jobList; let i=index" class="modal-body light-bg">
+            <div class="card job-apply-content" *ngIf="i<2">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-7 col-12">
+                            <a>
+                                <h3>{{job.designation}}</h3>
+                            </a>
+                            <h4>{{job.company_name}}</h4>
+                        </div>
+                        <div class="col-sm-5 col-12">
+                            <span class="briefcase">
+                          <i class="fa fa-briefcase"></i>
+                          <h4>{{job.experience}}</h4>
+                      </span>
+                            <span class="location">
+                          <i class="fa fa-map-marker"></i>
+                          <h4>{{job.location}}</h4>
+                      </span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row ">
+                        <div class="col-md-8 col-12">
+                            <p class="text">Referral Reward <span>Rs {{job.referral_reward}}</span> </p>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="apply-now">
+                                <a (click)="referJob(job)"> Go Refer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="card job-apply-content">
+          <div class="card-body">
+              <div class="row">
+                  <div class="col-sm-7 col-12">
+                      <a>
+                          <h3>Sr. Product Manager</h3>
+                      </a>
+                      <h4>Company Name</h4>
+                  </div>
+                  <div class="col-sm-5 col-12">
+                      <span class="briefcase">
+                          <i class="fa fa-briefcase"></i>
+                          <h4>Experience</h4>
+                      </span>
+                      <span class="location">
+                          <i class="fa fa-map-marker"></i>
+                          <h4>Location</h4>
+                      </span>
+                  </div>
+              </div>
+              <hr>
+              <div class="row ">
+                  <div class="col-md-8 col-12">
+                      <p class="text">Referral Reward <span>Rs 13,000</span> </p>
+                  </div>
+                  <div class="col-md-4 col-12">
+                      <div class="apply-now">
+                          <a> Go Refer</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+        </div>
+    </div>
+</div>

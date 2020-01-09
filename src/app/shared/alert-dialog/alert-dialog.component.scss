@@ -1,0 +1,75 @@
+@import '~@angular/cdk/overlay-prebuilt.css';
+.alert{
+    padding: 0px;
+}
+.alert h5{
+    font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: normal;
+  text-align: left;
+  font-family: Poppins-Regular;
+  color: #000;
+}
+.alert p{
+    font-family: Poppins-Regular;
+  font-size: 11px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.btn-cancel1{
+    width: 84px;
+  height: 31px;
+  border-radius: 17.5px;
+  border: solid 1px #979797;
+  font-family: Poppins-Medium;
+  font-size: 11px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000 ;
+  margin: 0 10px 0 0;
+  background-color: #ffffff;
+}
+
+.btn-confirm1{
+    width: 84px;
+  height: 31px;
+  border-radius: 17.5px;
+  background-color:#19864b;
+  font-family: Poppins-Medium;
+  font-size: 11px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.55;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.btngrp{
+    float: right;
+    padding: 7px 0;
+}
+
+@media screen and (max-width:767px) {
+   
+  #cdk-overlay-2{       
+      width: 290px !important;
+      height: 135px !important;
+      margin-top: 40% !important;
+  }
+  #cdk-overlay-2 .mat-dialog-container {
+          border-radius: 10px !important;
+  }
+}

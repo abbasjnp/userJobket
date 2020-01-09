@@ -1,0 +1,46 @@
+<section class="myprofile-section-top mt-50 dis-none mt-105">
+    <div class="container">
+        <div class="card vdo">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item col">
+                                <!-- <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                  aria-selected="true">My Profile</a> -->
+                                <a class="nav-link" data-toggle="tab" [routerLink]="['/myprofile-info/profile']" [routerLinkActive]="['active']" aria-controls="home" aria-selected="false">My Profile</a>
+                            </li>
+                            <li class="nav-item col">
+                                <a class="nav-link" data-toggle="tab" [routerLink]="['/myprofile-info/my-status']" [routerLinkActive]="['active']" role="tab" aria-controls="profile" aria-selected="false">My Status</a>
+                            </li>
+                            <li class="nav-item col">
+                                <a class="nav-link" data-toggle="tab" [routerLink]="['/myprofile-info/my-point']" [routerLinkActive]="['active']" role="tab" aria-controls="contact" aria-selected="false">My Point</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<router-outlet></router-outlet>
+<section>
+    <div class="container">
+        <div class="card vdo">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tab-content" id="myTabContent">
+                            <!-- <app-my-profile class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"></app-my-profile> -->
+
+                            <!-- <app-my-status class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"></app-my-status> -->
+                            <!-- <app-my-point class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"></app-my-point> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

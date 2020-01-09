@@ -1,0 +1,39 @@
+@media only screen and (max-width:767px) {
+    .job-apply-content hr {
+        margin-left: -21px;
+        width: 110% !important;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 0;
+        border-top: 1px solid #d8d8d8;
+    }
+    .mat-dialog-content {
+        display: block;
+        margin: 0 -24px;
+        padding: 0 24px;
+        max-height: 51vh!important;
+        overflow: scroll !important;
+    }
+}
+
+.job-apply-1 {
+    height: 352px;
+    overflow-y: scroll;
+}
+
+.job-apply-content hr {
+    margin-left: -11px;
+    width: 104%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    border-top: 1px solid #d8d8d8;
+}
+
+.mat-dialog-content {
+    display: block;
+    margin: 0 -24px;
+    padding: 20px 24px;
+    max-height: 65vh!important;
+    overflow: hidden;
+}

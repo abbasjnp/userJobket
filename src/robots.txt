@@ -1,0 +1,8 @@
+
+
+# Created July, 29, 2019.
+# Author: Dhanesh Rathore
+
+User-agent: *
+Disallow: 
+Sitemap: https://jobket.in/sitemap.xml

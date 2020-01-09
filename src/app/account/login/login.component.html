@@ -1,0 +1,497 @@
+<div *ngIf="data.type=='login'" mat-dialog-content>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="login-sec-1 text-center">
+                <h2>Login</h2>
+                <button type="button" class="close dismd-n"><i class="fa fa-times" (click)="closeDialog()"></i></button>
+
+                <hr class="dismd-n">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form [formGroup]="loginForm">
+                            <div class="contact-content">
+                                <div class="text-justify mb-9">
+                                    <label for="exampleInputEmail1">EMAIL ID</label>
+                                    <span *ngIf="email.invalid && (email.dirty || email.touched)">
+                                        <p *ngIf="email.errors.required">Please enter your email address</p>
+                                        <p *ngIf="email.errors.pattern">Please enter a valid email address</p>
+                                    </span>
+                                    <span *ngIf="resMessage">
+                                        <p>{{resMessage}}</p>
+                                    </span>
+
+                                    <input (keyup)="eraseMessage()" type="email" name="email" formControlName="email"
+                                        required class="form-control" placeholder="Your email address">
+
+                                </div>
+                                <div class="form-group text-justify">
+                                    <label for="exampleInputPassword1">PASSWORD</label>
+                                    <span *ngIf="password.invalid && (password.dirty || password.touched)">
+                                        <p *ngIf="password.errors.required">Password is required</p>
+                                        <!-- <p *ngIf="password.errors.pattern">Please enter a valid email</p> -->
+                                    </span>
+                                    <span>Forgot password? <a (click)="forgotPwd()">Click here</a> </span>
+                                    <input type="password" formControlName="password" required class="form-control"
+                                        placeholder="Your password">
+                                </div>
+                                <button type="submit" [class.btn-deactivate]="loginForm.invalid"
+                                    [disabled]="loginForm.invalid" (click)="loginSignUp('login')"
+                                    class="btn btn-login-green">Login</button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="seprator row">
+                    <h4>OR</h4>
+                </div>
+                <div class="social-login row mr-0">
+                    <ul>
+                        <li class="" (click)="socialSignIn('google')">
+                            <span><img src="./../../../assets/img/google-logo(color).png" alt=".."></span>
+                            <a>
+                                Login with Google
+                            </a>
+                        </li>
+                        <li class="fb" (click)="socialSignIn('facebook')">
+                            <span>
+                                <img src="./../../../assets/img/f-logo.png" alt="..">
+                            </span>
+                            <a>
+                                Login with Facebook
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <span>
+                                <img src="./../../../assets/img/linkedin_new.png" alt="..">
+                            </span>
+                            <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86o2xpjqz974i0&redirect_uri=http://localhost:4200/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social"
+                                (click)="getJobDataForLinkDin()">
+                                Login with Linkedin
+
+                            </a>
+                        </li> -->
+
+                        <li>
+                            <span>
+                                <img src="./../../../assets/img/linkedin_new.png" alt="..">
+                            </span>
+                            <a
+                                href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81p8cjl7pehohx&redirect_uri=https://jobket.in/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social"
+                                (click)="getJobDataForLinkDin()">
+                                Login with Linkedin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="login-mbl-1">Not a member? <a (click)="openSignUpDialog('applyjob')"> Sign up now </a></p>
+
+            </div>
+        </div>
+        <div class="col-md-6 dis-none">
+            <div class="login-sec-2 text-white text-center">
+                <div class="modal-header">
+                    <button type="button" class="close text-white"><i class="fa fa-times"
+                            (click)="closeDialog()"></i></button>
+                </div>
+                <div class="login-logo">
+                    <h2>Hey Guys!</h2>
+                    <p>Sign up here to find the most suitable job for you!</p>
+                    <a (click)="changeDialog('applyjob')" class="btn btn-signup">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="data.type=='signUp'" class="pt-0">
+    <div mat-dialog-content>
+        <!-- ..For normal signup------ -->
+        <div class="row" *ngIf="data.type=='signUp' && data.type1=='applyjob'">
+            <div class="col-md-6">
+                <div class="signup-sec-1 text-white text-center ">
+                    <div class="login-logo-1">
+                        <h2>Welcome Back!</h2>
+                        <p>To stay connected, please log in with your personal information!</p>
+                        <a (click)="changeDialog('openLogin')" class="btn btn-signup">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-sec-1 text-center signup-hd">
+                        <span class="mobile-back" *ngIf="mobileview"><i class="fa fa-arrow-left" (click)="openSignUpDialog('applyjob')"></i></span>
+                    <div class="modal-header ">
+                            
+                        <h2 class="modal-title ml-34">Sign-up</h2>
+                        <button type="button" class="close"><i class="fa fa-times" (click)="closeDialog()"></i></button>
+                    </div>
+                    <hr class="dismd-n">
+                    <div *ngIf="mobileview1">
+                        <div class="social-login row soci-l">
+                            <ul>
+                                <li class="" (click)="socialSignIn('google','isSignUp')">
+                                    <span><img src="./../../../assets/img/google-logo(color).png" alt=".."></span>
+                                    <a>
+                                        Sign Up with Google
+                                    </a>
+                                </li>
+                                <li class="fb" (click)="socialSignIn('facebook','isSignUp')">
+                                    <span>
+                                        <img src="./../../../assets/img/f-logo.png" alt="..">
+                                    </span>
+                                    <a>
+                                        Sign Up with Facebook
+                                    </a>
+                                </li>
+                                <!-- <li>
+                                    <span>
+                                     <img src="./../../../assets/img/linkedin_new.png" alt="..">
+                                 </span>
+                                 <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86o2xpjqz974i0&redirect_uri=http://localhost:4200/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social" 
+                                 (click)="getJobDataForLinkDin('isSignUp')">
+                                     Sign Up with Linkedin
+     
+                                 </a>
+                             </li> -->
+                                <li>
+                                    <span>
+                                        <img src="./../../../assets/img/linkedin_new.png" alt="..">
+                                    </span>
+                                    <a
+                                        href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81p8cjl7pehohx&redirect_uri=https://jobket.in/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social"
+                                         (click)="getJobDataForLinkDin('isSignUp')">
+                                        Sign Up with Linkedin
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="seprator-1 row ">
+                            <h4>OR</h4>
+                        </div>
+                        <div class="row dis-none">
+                            <div class="col-md-12">
+                                <form [formGroup]="loginForm">
+                                    <div class="contact-content">
+                                        <div class="text-justify">
+                                            <label for="exampleInputEmail1">EMAIL ID</label>
+                                            <span *ngIf="email.invalid && (email.dirty || email.touched)">
+                                                <p *ngIf="email.errors.required">Please enter your email address</p>
+                                                <p *ngIf="email.errors.pattern">Please enter a valid email address</p>
+                                            </span>
+                                            <span *ngIf="resMessage">
+                                                <p>{{resMessage}}</p>
+                                            </span>
+                                            <input
+                                                [ngClass]="{'border-invalid':email.invalid && (email.dirty || email.touched)}"
+                                                formControlName="email" type="email" class="form-control"
+                                                placeholder="Your email address">
+                                            <!-- <input formControlName="email" type="email" class="form-control" placeholder="Your email address"> -->
+
+                                        </div>
+                                        <div class="form-group text-justify">
+                                            <label for="exampleInputPassword1">PASSWORD</label>
+                                            <span *ngIf="password.invalid && (password.dirty || password.touched)">
+                                                <p *ngIf="password.errors.required">Password is required</p>
+                                                <!-- <p *ngIf="password.errors.pattern">Please enter a valid email</p> -->
+                                            </span>
+                                            <input
+                                                [ngClass]="{'border-invalid':password.invalid && (password.dirty || password.touched)}"
+                                                formControlName="password" type="password" class="form-control"
+                                                placeholder="Your password">
+                                            <!-- <input  formControlName="password" type="password" class="form-control" placeholder="Your password"> -->
+
+                                        </div>
+                                        <button (click)="loginSignUp('signUp')" type="submit"
+                                            class="btn btn-login-green">Sign up</button>
+                                    </div>
+                                    <p class="lts dis-none">By signing up, you agree to our <a
+                                            href="https://jobket.in/terms-conditions" target="_blank">Terms &
+                                            Conditions</a> and <a href="https://jobket.in/privacy-policy"
+                                            target="_blank">Privacy policy</a>.</p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row dismd-n">
+                            <div class="col-sm-12">
+                                <button class="signup-email" (click)="mobilesignup()">
+                                    <span>
+                                        <img src="./../../../assets/img/mail.png" alt="..">
+                                    </span>Sign up with email
+                                </button>
+                                <p class="login-mbl-1">Already a member? <a (click)="openLoginDialog()"> Login now </a>
+
+                                    <p class="lts">By signing up, you agree to our <a
+                                            href="https://jobket.in/terms-conditions" target="_blank">Terms &
+                                            Conditions</a>
+                                        and <a href="https://jobket.in/privacy-policy" target="_blank">Privacy
+                                            policy</a>.</p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="lock-info">
+                                    <span>
+                                        <img src="./../../../assets/img/lock.png" alt="..">
+                                    </span>
+                                    <div>
+                                        <h4>Privacy assured</h4>
+                                        <p>Your activities on Jobket will not be shown In the social network you signed
+                                            up with. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ..For normal signup End here------ -->
+        <!-- For refer and earn button click -->
+        <div class="row" *ngIf="data.type=='signUp' && data.type1=='refer'">
+            <div class="col-md-6">
+                <div class="signup-sec-1 text-white text-center ">
+                    <div class="login-logo-1">
+                        <h2>Login to Refer!</h2>
+                        <p>To refer your friends, please login with your personal information!</p>
+                        <a (click)="changeDialog('openLogin')" class="btn btn-signup">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-sec-1 text-center">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Sign-up to refer</h2>
+                        <button type="button" class="close"><i class="fa fa-times" (click)="closeDialog()"></i></button>
+                    </div>
+                    <hr class="dismd-n">
+                    <div class="ref-mb" *ngIf="mobileview1">
+                        <div class="social-login row soci-l">
+                            <ul>
+                                <li class="" (click)="socialSignIn('google','isSignUp')">
+                                    <span><img src="./../../../assets/img/google-logo(color).png" alt=".."></span>
+                                    <a>
+                                        Sign Up with Google
+                                    </a>
+                                </li>
+                                <li class="fb" (click)="socialSignIn('facebook','isSignUp')">
+                                    <span>
+                                        <img src="./../../../assets/img/f-logo.png" alt="..">
+                                    </span>
+                                    <a>
+                                        Sign Up with Facebook
+                                    </a>
+                                </li>
+                                <!-- <li><a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86o2xpjqz974i0&redirect_uri=http://localhost:4200/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social"><i class="fa fa-linkedin"></i></a></li> -->
+
+                                <li>
+                                    <span>
+                                        <img src="./../../../assets/img/linkedin_new.png" alt="..">
+                                    </span>
+                                    <a
+                                        href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81p8cjl7pehohx&redirect_uri=https://jobket.in/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social"
+                                        (click)="getJobDataForLinkDin('isSignUp')">
+                                        Sign Up with Linkedin
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="seprator-1 row ">
+                            <h4>OR</h4>
+                        </div>
+                       
+                        <!-- SignUp with refer in Mobile  View -->
+
+                        <div class="row dis-none">
+                            <div class="col-md-12">
+                                <form [formGroup]="loginForm">
+                                    <div class="contact-content">
+                                        <div class="text-justify">
+                                            <label for="exampleInputEmail1">EMAIL ID</label>
+                                            <span *ngIf="email.invalid && (email.dirty || email.touched)">
+                                                <p *ngIf="email.errors.required">Please enter your email address</p>
+                                                <p *ngIf="email.errors.pattern">Please enter a valid email address</p>
+                                            </span>
+                                            <span *ngIf="resMessage">
+                                                <p>{{resMessage}}</p>
+                                            </span>
+                                            <input
+                                                [ngClass]="{'border-invalid':email.invalid && (email.dirty || email.touched)}"
+                                                formControlName="email" type="email" class="form-control"
+                                                placeholder="Your email address">
+                                        </div>
+                                        <div class="form-group text-justify">
+                                            <label for="exampleInputPassword1">PASSWORD</label>
+                                            <span *ngIf="password.invalid && (password.dirty || password.touched)">
+                                                <p *ngIf="password.errors.required">Password is required</p>
+                                                <!-- <p *ngIf="password.errors.pattern">Please enter a valid email</p> -->
+                                            </span>
+                                            <input
+                                                [ngClass]="{'border-invalid':password.invalid && (password.dirty || password.touched)}"
+                                                formControlName="password" type="password" class="form-control"
+                                                placeholder="Your password">
+                                        </div>
+                                        <button (click)="loginSignUp('signUp')" type="submit"
+                                            class="btn btn-login-green">Sign up</button>
+                                    </div>
+                                    <p class="lts dis-none">By signing up, you agree to our <a
+                                            href="https://jobket.in/terms-conditions" target="_blank">Terms &
+                                            Conditions</a> and <a href="https://jobket.in/privacy-policy"
+                                            target="_blank">Privacy policy</a>.</p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row dismd-n">
+                            <div class="col-sm-12">
+                                <button class="signup-email" (click)="mobilesignup()">
+                                    <span>
+                                        <img src="./../../../assets/img/mail.png" alt="..">
+                                    </span>Sign up with email
+                                </button>
+                                <p class="login-mbl-1">Already a member? <a (click)="openLoginDialog()"> Login now </a>
+                                <p class="lts">By signing up, you agree to our <a
+                                        href="https://jobket.in/terms-conditions" target="_blank">Terms & Conditions</a>
+                                    and <a href="https://jobket.in/privacy-policy" target="_blank">Privacy policy</a>.
+                                </p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="lock-info">
+                                    <span>
+                                        <img src="./../../../assets/img/lock.png" alt="..">
+                                    </span>
+                                    <div>
+                                        <h4>Privacy assured</h4>
+                                        <p>Your activities on Jobket will not be shown In the social network you signed
+                                            up with. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dis-mob-none">
+                        <p class="refer-p">Sign up and create your unique referral link and code.</p>
+
+                        <div class="refer-social row">
+                            <ul>
+                                <li class="fb1" (click)="socialSignIn('facebook','isSignUp')"><a><i class="fa fa-facebook"></i></a>
+                                </li>
+
+                                <li class="lnkd">
+                                    <!-- <a
+                                        href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=86o2xpjqz974i0&redirect_uri=http://localhost:4200/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social"><i
+                                            class="fa fa-linkedin" (click)="getJobDataForLinkDin('isSignUp')"></i>
+                                    </a> -->
+                                    <a
+                                        href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81p8cjl7pehohx&redirect_uri=https://jobket.in/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social"><i
+                                            class="fa fa-linkedin" (click)="getJobDataForLinkDin('isSignUp')"></i>
+                                    </a>
+                                </li>
+
+                                <li class="gp" (click)="socialSignIn('google','isSignUp')"><a>
+                                        <img src="./../../../assets/img/google-logo-refer.png" alt="..">
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="seprator-1 row mobileview1">
+                        <h4>OR</h4>
+                    </div>
+
+                    <!-- SignUp with refer in Desktop View -->
+                    <div class="row dis-none">
+                        <div class="col-md-12">
+                            <form [formGroup]="loginForm">
+                                <div class="contact-content">
+                                    <div class="text-justify">
+                                        <label for="exampleInputEmail1">EMAIL ID</label>
+                                        <span *ngIf="email.invalid && (email.dirty || email.touched)">
+                                            <p *ngIf="email.errors.required">Please enter your email address</p>
+                                            <p *ngIf="email.errors.pattern">Please enter a valid email address</p>
+                                        </span>
+                                        <span *ngIf="resMessage">
+                                            <p>{{resMessage}}</p>
+                                        </span>
+                                        <input
+                                            [ngClass]="{'border-invalid':email.invalid && (email.dirty || email.touched)}"
+                                            formControlName="email" type="email" class="form-control"
+                                            placeholder="Your email address">
+                                    </div>
+                                    <div class="form-group text-justify">
+                                        <label for="exampleInputPassword1">PASSWORD</label>
+                                        <span *ngIf="password.invalid && (password.dirty || password.touched)">
+                                            <p *ngIf="password.errors.required">Password is required</p>
+                                            <!-- <p *ngIf="password.errors.pattern">Please enter a valid email</p> -->
+                                        </span>
+                                        <input
+                                            [ngClass]="{'border-invalid':password.invalid && (password.dirty || password.touched)}"
+                                            formControlName="password" type="password" class="form-control"
+                                            placeholder="Your password">
+                                    </div>
+                                    <button (click)="loginSignUp('signUp')" type="submit"
+                                        class="btn btn-login-green">Sign up & Refer</button>
+                                </div>
+                                <p class="lts dis-none">By signing up, you agree to our <a
+                                        href="https://jobket.in/terms-conditions" target="_blank">Terms &
+                                        Conditions</a> and <a href="https://jobket.in/privacy-policy"
+                                        target="_blank">Privacy policy</a>.</p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- For refer and earn button click end here-->
+    </div>
+</div>
+<!-- For mobile both -->
+<div *ngIf="mobileview">
+    <div mat-dialog-content>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="login-sec-1 text-center">
+                    <div class="row mobileview">
+                        <div class="col-md-12">
+                            <form [formGroup]="loginForm">
+                                <div class="contact-content">
+                                    <div class="text-justify mb-18">
+                                        <label for="exampleInputEmail1">EMAIL ID</label>
+                                        <!-- <span class="error1">Please enter a valid email format</span> -->
+                                        <span *ngIf="email.invalid && (email.dirty || email.touched)">
+                                            <p *ngIf="email.errors.required">Please enter your email address</p>
+                                            <p *ngIf="email.errors.pattern">Please enter a valid email address</p>
+                                        </span>
+                                        <span *ngIf="resMessage">
+                                            <p>{{resMessage}}</p>
+                                        </span>
+                                        <input
+                                            [ngClass]="{'border-invalid':email.invalid && (email.dirty || email.touched)}"
+                                            formControlName="email" type="email" class="form-control"
+                                            placeholder="Your email address">
+                                    </div>
+                                    <div class="form-group text-justify mb-18">
+                                        <label for="exampleInputPassword1">PASSWORD</label>
+                                        <span *ngIf="password.invalid && (password.dirty || password.touched)">
+                                            <p *ngIf="password.errors.required">Password is required</p>
+                                            <!-- <p *ngIf="password.errors.pattern">Please enter a valid email</p> -->
+                                        </span>
+                                        <input
+                                            [ngClass]="{'border-invalid':password.invalid && (password.dirty || password.touched)}"
+                                            formControlName="password" type="password" class="form-control"
+                                            placeholder="Your password">
+                                    </div>
+                                    <button (click)="loginSignUp('signUp')" [class.btn-deactivate]="loginForm.invalid"
+                                        [disabled]="loginForm.invalid" type="submit"
+                                        class="btn btn-login-green mb-18">Sign up</button>
+                                </div>
+                                <p class="login-mbl-1">Already a member? <a (click)="openLoginDialog()"> Login now </a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- For mobile end -->

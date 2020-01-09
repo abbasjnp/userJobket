@@ -1,0 +1,83 @@
+<div *ngIf="data.type=='login'" class="emailcheck-1">
+    <!-- Modal Header -->
+    <div class="modal-header">
+      <h4 class="modal-title">Sign-up</h4>
+      <button type="button" class="close"><i class="fa fa-times" (click)="closeDialog()"></i></button>
+    </div> 
+    <hr class="dismd-n">
+    <!-- Modal body -->
+    <div class="modal-body text-center">
+     <h3>Check your email!</h3>
+     <p>We have sent a verification link to your email ID. Please click on it and ensure registration.</p>
+     <img src="./../../../../assets/img/Triangle.png" alt="..">
+    </div>
+    <button (click)="closeDialog()"  type="submit" class="btn btn-login-green">Okay</button>
+   
+</div>
+
+<div  *ngIf="data.type=='signup-emailCheck'">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="signup-sec-1 text-white text-center ">
+                    <div class="login-logo-1">
+                      <img src="./../../../../assets/img/logo.png" alt="..">
+                        <h2>You're almost there!</h2>
+                        <p>Valid information increases chances of getting contacted by companies</p>                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-sec-1 text-center">
+                        <div class="modal-header">
+                                <h2 class="modal-title">Sign-up</h2>
+                                <button type="button" class="close"><i class="fa fa-times"  data-toggle="modal" data-target="#exampleModal"></i></button>
+                              </div> 
+                              <!-- (click)="alertDialog()" -->
+                              <hr class="dismd-n">                             
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form>
+                                <div class="contact-content">
+                                    <div class="text-justify min-ht">
+                                        <label for="contactEmail1">CONTACT EMAIL <span>*</span>
+                                       </label>
+                                       <span *ngIf="email.invalid && (email.dirty || email.touched)">
+                                        <p *ngIf="email.errors.required">Email is required</p>
+                                        <p *ngIf="email.errors.pattern">Please enter a valid email</p>
+                                       
+                                       </span>
+                                       <span>
+                                            <p *ngIf="resMessage">{{resMessage}}</p>
+                                       </span>
+                                        <input [formControl]="email"   type="email" class="form-control" placeholder="asdf@asdf.com">
+                                    </div>
+                                   
+                                    <button (click)="signupdone()" [class.btn-deactivate]="email.invalid" class="btn btn-email" [disabled]="email.invalid" type="submit" >Done</button>
+                                    <!-- <button (click)="checkemail(email.value)" type="submit" class="btn btn-deactivate">Done</button> -->
+                                    
+                                </div>
+                               
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+       <div class="alert-1 modal-body">  
+        <div class="alert">
+      <h5>jobket.in says: </h5>
+      <p>Hey! You’re one step away from an ideal job. 
+          Want to quit now?</p>
+          <div class="btngrp">
+                <button  data-dismiss="modal" class="btn btn-cancel1">Cancel</button>
+                <button (click)="closeDialog1()" data-dismiss="modal" class="btn btn-confirm1">Confirm</button>
+          </div>
+        </div>
+  </div>  
+      </div>
+    </div>
+  </div>

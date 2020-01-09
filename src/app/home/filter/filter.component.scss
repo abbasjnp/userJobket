@@ -1,0 +1,40 @@
+.modal-header{
+    padding: 0;
+    border: none;
+}
+.hdbtn{
+    margin-left: 0;
+}
+.hdp{
+    font-size: 15px;
+    color: gray;
+    margin: 2px 11px;
+}
+.btn-location{
+    border-radius: 2.5px;
+  border: solid 0.8px #979797;
+  background-color: #fff;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: Poppins-Regular;
+    font-size: 12px;
+}
+.btn-location:hover{
+    background-color: #19864b;
+    color: #fff;
+}
+.active1{
+    background-color: #19864b;
+    color: #fff;
+}
+.modal-body h4{
+    font-family: Poppins-Medium;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+.hdp-1{
+    font-size: 14px;
+    float: right;
+    font-family: Poppins-Medium;
+}

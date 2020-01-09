@@ -1,0 +1,47 @@
+<section class="sec-contact mt-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-6">
+                <div class="">
+                    <h2>Contact Us</h2>
+                </div>
+            </div>
+            <div class="col-md-6 col-6">
+                <img src="./../../../assets/img/contact.png" alt=".." style="width: 100%">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="query">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="">
+                    <h2>Submit your Query</h2>
+                    <form [formGroup]="contactUsForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Name" formControlName="name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" formControlName="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" formControlName="subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Message" formControlName="message" rows="5" cols="5"></textarea>
+                        </div>
+                        <div class="text-right form-group">
+                            <button type="submit" class="btn btn-green btn-contact" (click)="contactUs()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <agm-map id="map" [latitude]="lat" [longitude]="lng" [zoomControl]="false" [disableDoubleClickZoom]="true" [mapDraggable]="true">
+                    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                </agm-map>
+            </div>
+        </div>
+    </div>
+</section>

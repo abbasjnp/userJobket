@@ -1,0 +1,551 @@
+<footer >
+    <section class="top-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-12 ftr-top-box">
+                    <span class="ftr-top-icon">
+                        <i class="fa fa-map-marker"></i>
+                    </span>
+                    <span class="ftr-top-text">Hyperhire India Pvt. Ltd. 
+                        323-324 Square One Mall, Saket, New Delhi - 110017
+                    </span>
+                </div>
+                <div class="col-md-3 col-12 ftr-top-box">
+                    <span class="ftr-top-icon">
+                        <i class="fa fa-envelope-o"></i>
+                    </span>
+                    <span class="ftr-top-text1"> contact@jobket.in</span>
+                </div>
+                <div class="col-md-2 col-12 ftr-top-box">
+                    <span class="ftr-top-icon">
+                        <i class="fa fa-phone"></i>
+                    </span>
+                    <span class="ftr-top-text1">
+                        +91 11669 61000
+                    </span>
+                </div>
+                <div class="col-md-3 col-12 ftr-top-box">
+                    <div class="text-right">
+                        <a href="https://www.facebook.com/jobketindia" target="_blank" class="social-icon">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/JobketIndia" target="_blank" class="social-icon">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/hyperhire/?viewAsMember=true" target="_blank" class="social-icon">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/jobketindia/" target="_blank" class="social-icon">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-bottom">
+        <div class="container">
+        <div class="row footer-mob">
+                        <div class="col-12 col">
+                       
+                          
+                        <mat-accordion>
+                                <mat-expansion-panel>
+                                  <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        Jobs by Location
+                                    </mat-panel-title>
+                                  </mat-expansion-panel-header>
+                                 <mat-panel-description>
+                                        
+                                                <div class="legal">
+                                                    <ul class="list-unstyled list1">
+                                                        <li *ngFor="let job of searchJobs">
+                                                            <a [href]="BaseUrl+'search-jobs-in-'+job.loc">
+                                                                Jobs in {{job.loc}}
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                           
+                                 </mat-panel-description>
+                                </mat-expansion-panel>
+                            </mat-accordion>
+                            </div>
+                            <div class="col-12 col ">
+                                    <mat-accordion>
+                                <mat-expansion-panel>
+                                  <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        Jobs by Function
+                                    </mat-panel-title>
+                                  </mat-expansion-panel-header>
+                                 <mat-panel-description>
+                                        
+                                                <div class="legal">
+                                          <ul class="list-unstyled sub-accordion">
+                        <li>
+                         <mat-accordion>
+                                        <mat-expansion-panel hideToggle="true" #xyzm>
+                                                <mat-expansion-panel-header class="collapsed" >
+                                                  <mat-icon *ngIf="!xyzm.expanded">keyboard_arrow_right</mat-icon>
+                                             <mat-icon *ngIf="xyzm.expanded">keyboard_arrow_up</mat-icon>
+                                                  <mat-panel-title>
+                                                       <a class="card-link card-title" >
+                                         Software Engineering Jobs
+                                        <span class="span1">15</span>
+                                    </a>
+                                                  </mat-panel-title>
+                                                </mat-expansion-panel-header>
+                                                <mat-panel-description>                                                       
+                                                                <div class="legal">
+                                                                        <ul class="list-unstyled">
+                                                                            <li><a  [href]="BaseUrl+'Software-Engineering-jobs/Web-Fullstack-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Web Full Stack Jobs</a></li>
+                                                                            <li><a target="_blank" [href]="BaseUrl+'Software-Engineering-jobs/Server-Back-end-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Server/Back-end Jobs</a></li>
+                                                                            <li><a target="_blank" [href]="BaseUrl+'Software-Engineering-jobs/Front-end-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Front-end Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Android-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Android Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/IOS-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> IOS Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/System-&-Network-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> System & Network Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Security-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> QA Testing Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Infrasturcture-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Technical Support Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Devops-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Security Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Data-Engineering-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Infrastructure Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Devops-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Devops Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Data-Engineering-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Data Engineering Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Data-Science-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Data Science Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Product-Managing-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Product Managing Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Technical-Architect-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3" target="_blank"></i> Technical Architect Jobs</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                               
+                                                    </mat-panel-description>
+                                            </mat-expansion-panel>
+                                            </mat-accordion>
+                                            </li>
+                                            <li>
+                         <mat-accordion>
+                                        <mat-expansion-panel hideToggle="true" #marketingm>
+                                                <mat-expansion-panel-header class="collapsed" >
+                                                  <mat-icon *ngIf="!marketingm.expanded">keyboard_arrow_right</mat-icon>
+                                             <mat-icon *ngIf="marketingm.expanded">keyboard_arrow_up</mat-icon>
+                                                  <mat-panel-title>
+                                                       <a class="card-link card-title" >
+                                         Marketing Jobs
+                                        <span class="span1">12</span>
+                                    </a>
+                                                  </mat-panel-title>
+                                                </mat-expansion-panel-header>
+                                                <mat-panel-description>                                                       
+                                                                <div class="legal">
+                                                                        <ul class="list-unstyled">
+                                                                            <li><a [href]="BaseUrl+'Marketing-jobs/Marketing-jobs'"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Digital-Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Digital Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Planning-&-Strategy-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Planning & Strategy Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Brand-Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Brand Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Social-Media-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Social Media Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Content-Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Content Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/PR-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>PR Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Email-Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Email Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/SEO-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>SEO Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Digtal-Media-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Digital Media Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Events-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Events Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/ATL-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>ATL Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/BTL-Activation-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>BTL Activation Jobs</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                               
+                                                    </mat-panel-description>
+                                            </mat-expansion-panel>
+                                            </mat-accordion>
+                                            </li>
+                                            <li><a [href]="BaseUrl+'Sales-jobs'"><i class="fa fa-angle-right mr-3"></i> Sales Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'Creative-jobs'"><i class="fa fa-angle-right mr-3"></i> Creative Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'Business-jobs'"><i class="fa fa-angle-right mr-3"></i> Business Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'Finance-&-Administration-jobs'"><i class="fa fa-angle-right mr-3"></i>
+                                                Finance & Administration Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'H-R-jobs'"><i class="fa fa-angle-right mr-3"></i> HR Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'search-jobs'"><i class="fa fa-angle-right mr-3"></i> Other Jobs
+                                            </a></li>
+                                            </ul>
+                                                </div>
+                                            
+                                </mat-panel-description>
+                                </mat-expansion-panel>
+                                </mat-accordion>
+                            </div>
+                            <div class="col-12 col">
+                                    <mat-accordion>
+                                <mat-expansion-panel>
+                                        <mat-expansion-panel-header>
+                                          <mat-panel-title>
+                                                Jobs by Exp. Level
+                                          </mat-panel-title>
+                                        </mat-expansion-panel-header>
+                                        <mat-panel-description>
+                                                
+                                                        <div class="legal">
+                                                            <ul class="list-unstyled">
+                                                                <li><a [href]="BaseUrl+'search-jobs?exp=Fresher'">Fresher Jobs
+                                                                </a></li>
+                                                                    <li><a [href]="BaseUrl+'search-jobs?exp=Junior'"> Junior Jobs
+                                                                </a></li>
+                                                                    <li><a [href]="BaseUrl+'search-jobs?exp=Mid'"> Mid-Level Jobs
+                                                                </a></li>
+                                                                    <li><a [href]="BaseUrl+'search-jobs?exp=Senior'"> Senior Jobs
+                                                                </a></li>
+                                                                    <li><a [href]="BaseUrl+'search-jobs?exp=Director'"> Director Jobs
+                                                                </a></li>
+                                                            </ul>
+                                                        </div>
+                                                   
+                                        </mat-panel-description>
+                                </mat-expansion-panel>
+                                </mat-accordion>
+                            </div>
+                            <div class="col-12 col">
+                                    <mat-accordion>
+                                <mat-expansion-panel>
+                                        <mat-expansion-panel-header>
+                                          <mat-panel-title>
+                                                Employer
+                                          </mat-panel-title>
+                                        </mat-expansion-panel-header>
+                                        <mat-panel-description>
+                                                
+                                                        <div class="legal">
+                                                            <ul class="list-unstyled">
+                                                                <li><a href="https://recruit.jobket.in/account/login" target="_blank"> Post Jobs
+                                                            </a></li>
+                                                                <li><a href="https://recruit.jobket.in/contact" target="_blank"> Register for Services
+                                                            </a></li>
+                                                            </ul>
+                                                        </div>
+                                                       
+                                            </mat-panel-description>
+                                    </mat-expansion-panel>
+                                    </mat-accordion>
+                                </div>
+                                <div class="col-12 col">
+                                        <mat-accordion>
+                                    <mat-expansion-panel>
+                                            <mat-expansion-panel-header>
+                                              <mat-panel-title>
+                                                    Jobket
+                                              </mat-panel-title>
+                                            </mat-expansion-panel-header>
+                                            <mat-panel-description>
+                                                   
+                                                            <div class="legal">
+                                                                <ul class="list-unstyled">
+                                                                    <li>
+                                                                        <a [href]="BaseUrl+'search-jobs'" target="_blank"> Search Jobs
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a [href]="BaseUrl+'referral'" target="_blank"> Refer & Earn
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a routerLink='/about-us' target="_blank"> About Us
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a routerLink='/faq' target="_blank"> FAQ
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a routerLink='/contact-us' target="_blank"> Contact Us
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        
+                                                </mat-panel-description>
+                                        </mat-expansion-panel>
+                                        </mat-accordion>
+                                    </div>
+                                    <div class="col-12 col">
+                                            <mat-accordion>
+                                        <mat-expansion-panel>
+                                                <mat-expansion-panel-header>
+                                                  <mat-panel-title>
+                                                        Legal
+                                                  </mat-panel-title>
+                                                </mat-expansion-panel-header>
+                                                <mat-panel-description>                                                       
+                                                                <div class="legal">
+                                                                        <ul class="list-unstyled">
+                                                                            <li><a routerLink='/terms-conditions' target="_blank"> Term &amp;
+                                                                            Conditions
+                                                                        </a></li>
+                                                                            <li><a routerLink='/privacy-policy' target="_blank"> Privacy Policy
+                                                                        </a></li>
+                                                                            <li><a routerLink='/disclaimer' target="_blank"> Disclaimer
+                                                                        </a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                               
+                                                    </mat-panel-description>
+                                            </mat-expansion-panel>
+                                            </mat-accordion>
+                                            
+                                        </div>
+                    
+                    </div>
+            <div class="row dis-none">
+                <div class="col">
+                    <div class="legal">
+                        <h5>Jobket</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a [href]="BaseUrl+'search-jobs'" target="_blank"><i class="fa fa-angle-right mr-3"></i> Search Jobs
+                                </a>
+                            </li>
+                            <li>
+                                <a [href]="BaseUrl+'referral'" target="_blank"><i class="fa fa-angle-right mr-3"></i> Refer & Earn
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink='/about-us' target="_blank"><i class="fa fa-angle-right mr-3"></i> About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink='/faq' target="_blank"><i class="fa fa-angle-right mr-3"></i> FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a routerLink='/contact-us' target="_blank"><i class="fa fa-angle-right mr-3"></i> Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col foo-desk">
+                    <div class="legal">
+                        <h5>Jobs by Location</h5>
+                        <ul class="list-unstyled">
+                            <li *ngFor="let job of searchJobs">
+                                <a [href]="BaseUrl+'search-jobs-in-'+job.loc" target="_blank"><i class="fa fa-angle-right mr-3"></i>
+                                    Jobs in {{job.loc}}
+                                </a>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+
+                <div class="col sub-accordion">
+                    <div class="legal">
+                        <h5>Jobs by Function</h5>
+                        <ul class="list-unstyled">
+                        <li>
+                         <mat-accordion>
+                                        <mat-expansion-panel hideToggle="true" #xyz>
+                                                <mat-expansion-panel-header class="collapsed" >
+                                                  <mat-icon *ngIf="!xyz.expanded">keyboard_arrow_right</mat-icon>
+                                             <mat-icon *ngIf="xyz.expanded">keyboard_arrow_up</mat-icon>
+                                                  <mat-panel-title>
+                                                       <a class="card-link card-title" >
+                                         Software Engineering Jobs
+                                        <span class="span1">15</span>
+                                    </a>
+                                                  </mat-panel-title>
+                                                </mat-expansion-panel-header>
+                                                <mat-panel-description>                                                       
+                                                                <div class="legal">
+                                                                        <ul class="list-unstyled">
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Web-Fullstack-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Web Full Stack Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Server-Back-end-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Server/Back-end Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Front-end-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Front-end Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Android-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Android Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/IOS-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> IOS Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/System-&-Network-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> System & Network Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Security-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> QA Testing Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Infrasturcture-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Technical Support Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Devops-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Security Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Data-Engineering-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Infrastructure Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Devops-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Devops Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Data-Engineering-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Data Engineering Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Data-Science-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Data Science Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Product-Managing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Product Managing Jobs</a></li>
+                                                                            <li><a [href]="BaseUrl+'Software-Engineering-jobs/Technical-Architect-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i> Technical Architect Jobs</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                               
+                                                    </mat-panel-description>
+                                            </mat-expansion-panel>
+                                            </mat-accordion>
+                                            </li>
+                                            <li>
+                         <mat-accordion>
+                                        <mat-expansion-panel hideToggle="true" #marketing>
+                                                <mat-expansion-panel-header class="collapsed" >
+                                                  <mat-icon *ngIf="!marketing.expanded">keyboard_arrow_right</mat-icon>
+                                             <mat-icon *ngIf="marketing.expanded">keyboard_arrow_up</mat-icon>
+                                                  <mat-panel-title>
+                                                       <a class="card-link card-title" >
+                                         Marketing Jobs
+                                        <span class="span1">12</span>
+                                    </a>
+                                                  </mat-panel-title>
+                                                </mat-expansion-panel-header>
+                                                <mat-panel-description>                                                       
+                                                                <div class="legal">
+                                                                        <ul class="list-unstyled">
+                                                                            <li><a [href]="BaseUrl+'Marketing-jobs/Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Digital-Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Digital Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Planning-&-Strategy-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Planning & Strategy Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Brand-Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Brand Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Social-Media-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Social Media Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Content-Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Content Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/PR-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>PR Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Email-Marketing-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Email Marketing Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/SEO-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>SEO Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Digtal-Media-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Digital Media Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/Events-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>Events Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/ATL-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>ATL Jobs</a></li>
+                                                                                <li><a [href]="BaseUrl+'Marketing-jobs/BTL-Activation-jobs'" target="_blank"><i
+                                                                                class="fa fa-angle-right mr-3"></i>BTL Activation Jobs</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                               
+                                                    </mat-panel-description>
+                                            </mat-expansion-panel>
+                                            </mat-accordion>
+                                            </li>
+                                            <li><a [href]="BaseUrl+'Sales-jobs'" target="_blank"><i class="fa fa-angle-right mr-3"></i> Sales Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'Creative-jobs'" target="_blank"><i class="fa fa-angle-right mr-3"></i> Creative Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'Business-jobs'" target="_blank"><i class="fa fa-angle-right mr-3"></i> Business Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'Finance-&-Administration-jobs'" target="_blank"><i class="fa fa-angle-right mr-3"></i>
+                                                Finance & Administration Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'H-R-jobs'" target="_blank"><i class="fa fa-angle-right mr-3"></i> HR Jobs
+                                            </a></li>
+                                                    <li><a [href]="BaseUrl+'search-jobs'" target="_blank"><i class="fa fa-angle-right mr-3"></i> Other Jobs
+                                            </a></li>
+                                            </ul>                     
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="legal">
+                        <h5>Jobs by Exp. Level</h5>
+                        <ul class="list-unstyled">
+                            <li><a [href]="BaseUrl+'search-jobs?exp=Fresher'" target="_blank"><i
+                                class="fa fa-angle-right mr-3"></i> Fresher Jobs
+                        </a></li>
+                            <li><a [href]="BaseUrl+'search-jobs?exp=Junior'" target="_blank"><i
+                                class="fa fa-angle-right mr-3"></i> Junior Jobs
+                        </a></li>
+                            <li><a [href]="BaseUrl+'search-jobs?exp=Mid'" target="_blank"><i
+                                class="fa fa-angle-right mr-3"></i> Mid-Level Jobs
+                        </a></li>
+                            <li><a [href]="BaseUrl+'search-jobs?exp=Senior'" target="_blank"><i
+                                class="fa fa-angle-right mr-3"></i> Senior Jobs
+                        </a></li>
+                            <li><a [href]="BaseUrl+'search-jobs?exp=Director'" target="_blank"><i
+                                class="fa fa-angle-right mr-3"></i> Director Jobs
+                        </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="legal">
+                        <h5>Employer</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="https://recruit.jobket.in/account/login" target="_blank"><i
+                                class="fa fa-angle-right mr-3"></i> Post Jobs
+                        </a></li>
+                            <li><a href="https://recruit.jobket.in/contact" target="_blank"><i
+                                class="fa fa-angle-right mr-3"></i> Register for Services
+                        </a></li>
+                        </ul>
+                    </div>
+                    <div class="legal">
+                        <h5>Legal</h5>
+                        <ul class="list-unstyled">
+                            <li><a routerLink='/terms-conditions' target="_blank"><i class="fa fa-angle-right mr-3"></i> Term &amp;
+                            Conditions
+                        </a></li>
+                            <li><a routerLink='/privacy-policy' target="_blank"><i class="fa fa-angle-right mr-3"></i> Privacy Policy
+                        </a></li>
+                            <li><a routerLink='/disclaimer' target="_blank"><i class="fa fa-angle-right mr-3"></i> Disclaimer
+                        </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cin">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6>CIN: U74110DL2016PTC290812</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+

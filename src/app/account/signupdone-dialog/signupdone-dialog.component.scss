@@ -1,0 +1,190 @@
+.signup-done{
+
+}
+.signup-done h4{
+    font-family: Poppins-Bold;
+  font-size: 23px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.48;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  margin: 0 auto;
+}
+.signup-done .modal-header{
+    border: none;
+}
+.signup-done .modal-body{
+    padding: 0;
+}
+.signup-done p{
+    font-family: Poppins-SemiBold;
+  font-size: 9px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: left;
+}
+.signup-done h3{
+    font-family: Poppins-SemiBold;
+    font-size: 11px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.55;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000000;
+}
+.signup-done span{
+    font-family: Poppins-Medium;
+    font-size: 11px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    float: right;
+    color: #a9a9a9;
+}
+.mt-13{
+    margin-top: 15px;
+}
+.bt{
+  margin: 4px 0 0 0;
+  height: 36px;
+  line-height: 11px;
+  padding: 3px;
+  border-radius: 5px;
+  border: solid 1.5px #979797;
+  font-family: Poppins-Regular;
+  font-size: 9px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+.pd-8{
+    padding:12px 0 7px 0 !important;
+}
+.modal-body .col-sm-2 {
+    -ms-flex: 0 0 12.666667%;
+    flex: 0 0 12.666667%;
+    max-width: 15.666667%;
+    padding-right: 0;
+}
+.pdl{
+    padding-left: 3px !important;
+}
+.pdr{
+    padding-right: 3px !important;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mb-7{
+margin-bottom: 7px;
+}
+label{
+    font-family: Poppins-Regular;
+    font-size: 8px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #9b9b9b;
+}
+.pdlr{
+  padding-left: 0 !important;
+    margin-left: -13px ;
+}
+// >>>>>>>>>>>>>>for check box...........
+.checkbox {
+    padding-left: 20px;
+  }
+  .checkbox label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px;
+  }
+  .checkbox label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    opacity: 0.6;
+    margin-left: -20px;
+    border: 1px solid #ea6812;
+    color: #ea6812;
+    border-radius: 3px;
+    background-color: rgba(234, 104, 18, 0.09);
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+  }
+  .checkbox label::after {
+    display: inline-block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0;
+    top: 0;
+    margin-left: -20px;
+    padding-left: 3px;
+    padding-top: 1px;
+    font-size: 11px;
+    color: #ea6812;
+  }
+  .checkbox input[type="checkbox"],
+  .checkbox input[type="radio"] {
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 2px;
+    left: 16px;
+  }
+  .checkbox input[type="checkbox"]:focus + label::before,
+  .checkbox input[type="radio"]:focus + label::before {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+  }
+  .checkbox input[type="checkbox"]:checked + label::after,
+  .checkbox input[type="radio"]:checked + label::after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+  }
+  .checkbox input[type="checkbox"]:disabled + label,
+  .checkbox input[type="radio"]:disabled + label {
+    opacity: 0.65;
+  }
+  .checkbox input[type="checkbox"]:disabled + label::before,
+  .checkbox input[type="radio"]:disabled + label::before {
+    background-color: #eeeeee;
+    cursor: not-allowed;
+  }
+  .checkbox.checkbox-circle label::before {
+    border-radius: 50%;
+  }
+  .checkbox.checkbox-inline {
+    margin-top: 0;
+  }
+  .active1{
+    background-color: #19864b;
+    color: #fff;
+}
+@media screen and (max-width: 767px)
+{
+.pdlr {
+    padding-left: 0 !important;
+    margin-left: 0px !important;
+}
+} 

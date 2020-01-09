@@ -1,0 +1,38 @@
+<div>
+    <section class="dis-none">
+        <div class="container">
+            <div class="card vdo">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 my-status">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <a class="nav-item nav-link  col" [routerLink]="['apply-status']" [routerLinkActive]="['active']" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Apply Status</a>
+                                    <a class="nav-item nav-link col" [routerLink]="['referal-status']" [routerLinkActive]="['active']" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Referral Status</a>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                              <div class="col-md-12">
+                                  <div class="tab-content" id="nav-tabContent">
+                                      <div class="tab-pane fade show active"  role="tabpanel" aria-labelledby="nav-home-tab">
+                                       
+                                       
+                                      </div>
+                                      
+                                      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                        
+                                      </div>
+        
+                                    </div>
+                              </div>
+                            </div> -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <router-outlet></router-outlet>
+</div>

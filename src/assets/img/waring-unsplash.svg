@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="383" viewBox="0 0 1440 383">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}
+        </style>
+        <linearGradient id="linear-gradient" x1=".5" x2=".5" y1="-.015" y2=".542" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+            <stop offset="1" stop-color="#f8b615"/>
+        </linearGradient>
+    </defs>
+    <path id="matthew-waring-mdS647i6-ZM-unsplash" d="M0 0h1440v383H0z" class="cls-1" transform="rotate(180 720 191.5)"/>
+</svg>

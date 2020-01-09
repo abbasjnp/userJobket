@@ -1,0 +1,65 @@
+<div mat-dialog-content *ngIf="!withdraw_success">
+    <div class="modal-header ">
+        <h2 class="modal-title withdraw-poup-h2">Withdraw</h2>
+        <button type="button" (click)="dialogClose()" class="close" data-dismiss="modal">&times;</button>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <div class="withdraw-poup">
+                <form [formGroup]="withdrawForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group row">
+                        <label for="">WITHDRAW AMOUNT</label>
+                        <div class="col-sm-8 col-8">
+                            <input type="number" class="form-control" placeholder="Enter withdraw amount" formControlName="withdraw_amount" name="withdraw_amount" required>
+                        </div>
+                        <div class="col-sm-4 col-4">
+                            <div class="flag">
+                                <span>
+                  <img src="./../../../assets/img/india.png" alt="..">
+                  INR
+                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row mt-4">
+                        <label for="">Mobile NUMBER</label>
+                        <div class="col-sm-12">
+                            <!--  <div *ngIf="paytm_number.invalid && (paytm_number.dirty || paytm_number.touched)"
+                  style="color:red">
+                  <div *ngIf="paytm_number.errors.required">
+                    Paytm number is required.
+                  </div>
+                  </div> -->
+                            <input type="text" class="form-control" placeholder="Enter your Mobile number" formControlName="paytm_number" name="paytm_number" required>
+                        </div>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-sm-12 text-right">
+                            <button type="button" class="btn btn-cancel dis-none" (click)="onNoClick()">
+                  Cancel
+                  </button>
+                            <button type="submit" class="btn btn-confirm" [disabled]="!withdrawForm.valid">
+                  Confirm
+                  </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="withdraw-success" *ngIf="withdraw_success">
+    <div class="row">
+        <span class="popup-close-withdraw text-white"><i class="fa fa-times" 
+          (click)="dialogClose()"></i></span>
+        <div class="col-sm-12 text-center text-white">
+            <div class="secess">
+                <img src="./../../../assets/img/check-3.png" alt="..">
+                <h2>Withdraw Successful!</h2>
+                <p>The money will be transferred within 3 days</p>
+            </div>
+
+        </div>
+    </div>
+</div>

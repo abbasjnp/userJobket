@@ -1,0 +1,588 @@
+<section class="banner">
+         <div id="carouselExampleIndicators" class="carousel slide js-carousel" data-ride="carousel">
+                <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item  active banner-1" (click)="imagebuttonclick1('/referral')">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8 col-8">
+                                            <div class="carousel-caption">
+                                                    <div class="div-2 dis-none">
+                                                        <h2><span>Welcome to Jobket,</span><br>a unique <span>referral</span> job platform </h2>
+                                                       <p>Jobket allows you to find the most suitable jobs
+                                                            for yourself, your friend, and your family </p>
+                                                        <div class="mt-5 ">
+                                                            <a routerLink='/referral' class="btn btn-orange">Learn more about referral system</a>
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="empl-zone">
+                                                            Welcome to <br><span>Jobket</span><br>A unique <span>referral</span> job platform
+                                                        </h2>
+                                                        <div class="mt-2 empl-zone">
+                                                                <a routerLink='/referral' class="btn btn-orange">About our referral system</a>
+                                                            </div>
+                                                </div>
+                                    </div>
+                                    <div class="col-sm-4 col-4">
+                                       
+                                            <img class=" banner-1-img" [src]="bannerImg1" alt="..">
+                                   <div class="mob-number">1/3</div>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                  <div class="carousel-item  banner-2" (click)="imagebuttonclick('https://jobket.in/search-jobs?minSalary=0&maxSalary=4500000&location=International')">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8 col-8">
+                                            <div class="carousel-caption">
+                                                    <div class="div-2 dis-none">
+                                                        <h2>Want a <span>global career</span>?</h2>
+                                                       <p>Jobket offers you a global job opportunities </p>
+                                                        <div class="mt-5 ">
+                                                            <a href="https://jobket.in/search-jobs?minSalary=0&maxSalary=4500000&location=International" class="btn btn-orange">Find out more</a>
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="empl-zone">
+                                                            Want a <span>global</span><br>career? 
+                                                        </h2>
+                                                        <p class="empl-zone">Jobket offers you a global job opportunities </p>
+                                                        <div class="mt-2 empl-zone">
+                                                                <a href="https://jobket.in/search-jobs?minSalary=0&maxSalary=4500000&location=International" class="btn btn-orange">Find out more</a>
+                                                            </div>
+                                                            <div class="mob-num-2">
+                                                                <h6>2/3</h6>
+                                                            </div>
+                                                </div>
+                                    </div>
+                                    <div class="col-sm-4 col-4">
+                                            <img class="banner-2-img" [src]="bannerImg2" alt="..">
+                                            
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                  <div class="carousel-item" [ngClass]="bannerImg3" (click)="imagebuttonclick1('/search-jobs')">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8 col-8">
+                                            <div class="carousel-caption">
+                                                    <div class="div-2 dis-none">
+                                                        <h2>Need a career <span>power boost</span> ?</h2>
+                                                       <p>Jobket provides suitable job opportunities</p>
+                                                        <div class="mt-5 ">
+                                                            <a routerLink='/search-jobs' class="btn btn-orange">Find out more</a>
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="empl-zone">
+                                                            Need a career <br> <span>power boost</span> ? 
+                                                        </h2>
+                                                        <p class="empl-zone">Jobket provides suitable job opportunities</p>
+                                                        <div class="mt-2 empl-zone">
+                                                                <a routerLink='/search-jobs' class="btn btn-orange">Find out more</a>
+                                                            </div>
+                                                            
+                                                </div>
+                                    </div>
+                                    <div class="col-sm-4 col-4">
+                                            <!-- <img class=" banner-3-img" src="./../../../assets/img/laptop.png" alt=".."> -->
+                                            <!-- <img class="laptop-banner-3-img" src="./../../../assets/img/laptop-mob.png" alt=".."> -->
+                                            <div class="mob-num-3">
+                                                    <h6>3/3</h6>
+                                                </div>
+                                </div>
+                                </div>
+                            </div>
+                  </div>
+                </div>
+
+              </div> 
+              <!-- <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide>
+                    <div class=" banner-1">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8 col-8">
+                                            <div class="carousel-caption">
+                                                    <div class="div-2 dis-none">
+                                                        <h2><span>Welcome to Jobket,</span><br>a unique <span>referral</span> job platform </h2>
+                                                       <p>Jobket allows you to find the most suitable jobs
+                                                            for yourself, your friend, and your family </p>
+                                                        <div class="mt-5 ">
+                                                            <a routerLink='/referral' class="btn btn-orange">Learn more about referral system</a>
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="empl-zone">
+                                                            Welcome to <br><span>Jobket</span><br>A unique <span>referral</span> job platform
+                                                        </h2>
+                                                        <div class="mt-2 empl-zone">
+                                                                <a routerLink='/referral' class="btn btn-orange">About our referral system</a>
+                                                            </div>
+                                                </div>
+                                    </div>
+                                    <div class="col-sm-4 col-4">
+                                            <img class=" banner-1-img" src="./../../../assets/img/ban1-new.png" alt="..">
+                                   <div class="mob-number">1/3</div>
+                                    </div>
+                                </div>
+                            </div>
+                  </div>                  
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="banner-2">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8 col-8">
+                                            <div class="carousel-caption">
+                                                    <div class="div-2 dis-none">
+                                                        <h2>Want a <span>global career</span>?</h2>
+                                                       <p>Jobket offers you a global job opportunities </p>
+                                                        <div class="mt-5 ">
+                                                            <a href="https://jobket.in/search-jobs?minSalary=0&maxSalary=4500000&location=International" class="btn btn-orange">Find out more</a>
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="empl-zone">
+                                                            Want a <span>global</span><br>career? 
+                                                        </h2>
+                                                        <p class="empl-zone">Jobket offers you a global job opportunities </p>
+                                                        <div class="mt-2 empl-zone">
+                                                                <a href="https://jobket.in/search-jobs?minSalary=0&maxSalary=4500000&location=International" class="btn btn-orange">Find out more</a>
+                                                            </div>
+                                                            <div class="mob-num-2">
+                                                                <h6>2/3</h6>
+                                                            </div>
+                                                </div>
+                                    </div>
+                                    <div class="col-sm-4 col-4">
+                                            <img class="banner-2-img" src="./../../../assets/img/rakuten.png" alt="..">
+                                    </div>
+                                </div>
+                            </div>
+                  </div>
+                </ng-template>
+                <ng-template carouselSlide>
+                    <div class="banner-3 ">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-7 col-7">
+                                            <div class="carousel-caption">
+                                                    <div class="div-2 dis-none">
+                                                        <h2>Need a career <span>power boost</span> ?</h2>
+                                                       <p>Jobket provides suitable job opportunities</p>
+                                                        <div class="mt-5 ">
+                                                            <a routerLink='/search-jobs' class="btn btn-orange">Find out more</a>
+                                                        </div>
+                                                    </div>
+                                                    <h2 class="empl-zone">
+                                                            Need a career <br> <span>power boost</span> ? 
+                                                        </h2>
+                                                        <p class="empl-zone">Jobket provides suitable job opportunities</p>
+                                                        <div class="mt-2 empl-zone">
+                                                                <a routerLink='/search-jobs' class="btn btn-orange">Find out more</a>
+                                                            </div>
+                                                            
+                                                </div>
+                                    </div>
+                                    <div class="col-sm-5 col-5">
+                                            <img class=" banner-3-img" src="./../../../assets/img/laptop.png" alt="..">
+                                            <img class="laptop-banner-3-img" src="./../../../assets/img/laptop-mob.png" alt="..">
+                                            <div class="mob-num-2">
+                                                    <h6>3/3</h6>
+                                                </div>
+                                </div>
+                                </div>
+                            </div>
+                  </div>
+                </ng-template>
+            </owl-carousel-o>   -->
+             
+    </section>
+<section class="jobs ">
+    <div class="container ">
+        <div class="home-search-box">
+            <div class="row ">
+                <div class="col-md-12 ">
+                    <form>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div (click)="searchJobDesignation(searchItem.value)" class="input-group-text">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                            <input #searchItem (keyup.enter)="searchJobDesignation(searchItem.value)" type="text" class="form-control" placeholder="Search By Designation or Location">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="category-box">
+            <div class="row">
+                <div class="col-md-3 col-3" *ngFor="let nav of navs; let i= index">
+                    <a (click)="categoryNavigation(nav)">
+                        <img *ngIf="!isSafari" class="img-2" src="{{baseUrl}}{{nav.mobile_image_webp}}" alt="..">
+                        <img *ngIf="!isSafari" src="{{baseUrl}}{{nav.desktop_image_webp}}" alt=".." class="w-100 img-1">
+                        <img *ngIf="isSafari" class="img-2" src="{{baseUrl}}{{nav.mobile_image}}" alt="..">
+                        <img *ngIf="isSafari" src="{{baseUrl}}{{nav.desktop_image}}" alt=".." class="w-100 img-1">
+                        <div class="category-heading">
+                            <h4>{{nav.name}}</h4>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-3 " >
+                    <a routerLink="/search-jobs">
+                        <img [src]="viewMoreDesk" alt=".." class="w-100 img-1">
+                       
+                        <div class="img-2">
+                        <img _ngcontent-sc4="" alt=".." class="img-2" style="display:inline" [src]="oval1">
+                        <img _ngcontent-sc4="" alt=".." class="img-2" style="display:inline" [src]="oval1">
+                        <img _ngcontent-sc4="" alt=".." class="img-2" style="display:inline" [src]="oval1">
+                       
+                    </div>
+                    <div class="category-heading ">
+                            <h4>View More</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="jobs ">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-12 ">
+                <h2 class="Job-openings ">Featured Jobs</h2>
+            </div>
+        </div>
+        <div *ngFor="let job of jobList;let i=index ">
+            <div (click)="job_Designation_router(job)" class="card job-box " *ngIf="i<5">
+                <div class="card-body ">
+                    <div class="row ">
+                        <div class="col-sm-8 col-7">
+                            <h3>{{job.designation}} 
+                                <span class="fa fa-check-circle tooltip">
+                                    <span class="tooltiptext">verified job</span>
+                                 </span>  
+                            </h3>
+                            <h4 class="inline">{{job.company_name}}</h4>  
+                            <h6 class="inline"><span>|</span>{{job.posted_at}}</h6>
+                        </div>
+                        <div class="col-sm-4 col-5">
+                            <div class="row ">
+                                <div class="col-8 ">
+                                    <div class="rewards ">
+                                        <h4>Joining Bonus</h4>
+                                    </div>
+                                </div>
+                                <div class="col-4 ">
+                                    <div class="rewards1 ">
+                                        <h4>Rs {{job.hiring_reward}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="col-8 ">
+                                    <div class="rewards ">
+                                        <h4>Referral Reward</h4>
+                                    </div>
+                                </div>
+                                <div class="col-4 ">
+                                    <div class="rewards1">
+                                        <h4>Rs {{job.referral_reward}}</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-12 mt-10 ">
+                            <span class="briefcase ">
+                <i class="fa fa-briefcase "></i>
+                <h4>{{job.experience}}</h4>
+              </span>
+                            <span class="location">
+                <i class="fa fa-map-marker "></i>
+                <h4>{{job.location}}</h4>
+              </span>
+              <div class="mob-btn">
+                <a class="btn btn-refer"> View Details</a>
+            </div>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col-md-8 mt-10 dis-none">
+                            <p *ngIf="job.company_detail" class="text" [innerHTML]="job.company_detail | ellipsis: 100"></p>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="apply-now">
+                                <a class="btn btn-apply" *ngIf="job.applied_status ==false">Apply Now</a>
+                                <a class="btn btn-apply" *ngIf="job.applied_status ==true">Applied</a>
+                               
+                                <!-- <a (click)="referDialog(job)"> Refer Now</a> -->
+                                
+                                <a class="btn btn-refer"> Refer Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divider dis-none"></div>
+        <div class="view-more ">
+            <a routerLink='/search-jobs'>View more jobs</a>
+        </div>
+    </div>
+</section>
+
+<section class="client-logo pdtb-30">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Jobket in Press</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-6 text-right">
+                <a href="https://www.business-standard.com/article/pti-stories/hyperhire-gets-200k-funding-from-springcamp-to-launch-referral-platform-in-india-119053000843_1.html" target="_blank">
+                    <img [src]="clientLogo1" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-6">
+                <a href="https://yourstory.com/2019/05/b2b-hr-startup-hyperhire-funding-springcamp-korea" target="_blank">
+                    <img [src]="clientLogo2" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-6">
+                <a href="https://in.news.yahoo.com/hyperhire-receives-investment-worth-200k-usd-korean-vc-133527015.html" target="_blank">
+                    <img [src]="clientLogo3" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-6">
+                <a href=" https://www.thehindubusinessline.com/info-tech/hyperhire-receives-200000-investment-from-korean-vc-firm-springcamp/article27427915.ece" target="_blank">
+                    <img [src]="clientLogo4" alt="..">
+                </a>
+            </div>
+            <div class="col-md-3 col-6">
+                <a href="https://www.techcircle.in/2019/05/30/hr-solutions-startup-hyperhire-gets-funding-from-south-korea-s-springcamp" target="_blank">
+                    <img class="clg-1" [src]="clientLogo5" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-6">
+                <a href="https://www.vccircle.com/hr-startup-hyperhire-raises-seed-funding-from-south-korea-s-springcamp/" target="_blank">
+                    <img [src]="clientLogo6" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-6">
+                <a href="https://www.volanews.com/portal/article/index/id/2193.html" target="_blank">
+                    <img [src]="clientLogo7" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-6">
+                <a href="https://inc42.com/buzz/top-indian-startup-funding-galore-106-may/" target="_blank">
+                    <img [src]="clientLogo8" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-6">
+                <a href="https://www.outlookindia.com/newsscroll/hyperhire-gets-200k-funding-from-springcamp-to-launch-referral-platform-in-india/1544949" target="_blank">
+                    <img [src]="clientLogo9" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-6">
+                <a href="https://www.businesstelegraph.co.uk/hyperhire-gets-200000-funding-from-springcamp-to-launch-referral-platform-in-india/" target="_blank">
+                    <img [src]="clientLogo10" alt="..">
+                </a>
+            </div>
+            <div class="col-md-2 col-12 text-center">
+                <a href="https://www.peoplematters.in/news/funding-investment/hr-tech-platform-hyperhire-raises-200k-funding-from-south-koreas-springcamp-21864" target="_blank">
+                    <img class="clg-2" [src]="clientLogo11" alt="..">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Our Clients</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div>
+                    <img src="./../../../assets/img/clients/proejct-khel.webp" alt="..">
+                </div>
+            </div>
+            <div class="col">
+                    <div>
+                            <img src="./../../../assets/img/clients/pidge.webp" alt="..">
+                        </div>
+            </div>
+            <div class="col">
+                    <div>
+                            <img src="./../../../assets/img/clients/clarivate.webp" alt="..">
+                        </div>
+            </div>
+            <div class="col">
+                    <div>
+                            <img src="./../../../assets/img/clients/sphaera.webp" alt="..">
+                        </div>
+            </div>
+            <div class="col">
+                    <div>
+                            <img src="./../../../assets/img/clients/rv.webp" alt="..">
+                        </div>
+            </div>
+            <div class="col">
+                    <div>
+                            <img src="./../../../assets/img/clients/bottle openers.webp" alt="..">
+                        </div>
+            </div>
+            <div class="col">
+                    <div>
+                            <img src="./../../../assets/img/clients/Eye-D.webp" alt="..">
+                        </div>
+            </div>
+            <div class="col">
+                    <div>
+                            <img src="./../../../assets/img/clients/X Billion.webp" alt="..">
+                        </div>
+            </div>
+           
+
+        </div>
+    </div>
+</section>
+<section class="testimonial">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12 text-center ">
+                <h2>Success Stories</h2>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-12 ">
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="media ">
+                                <div class="col-md-3 col-sm-12 col-12 mr-3 ml-4 text-center col-12 ">
+                                    <img src="./../../../assets/img/user-shadow.png " alt="Find Jobs" srcset="./../../../assets/img/user-shadow.png 2x,./../../../assets/img/user-shadow.png 3x " class="Bitmap ">
+                                    <img [src]="userImg1" alt="Vivek Anand MDigital Marketing Manager at Hyperconnect"  class="pic_example ">
+                                    
+                                </div>
+                                <div class="media-body col-md-9 col-sm-12 col-12 col-12 ">
+                                    <div class="testimonial-text ">
+                                        <p>Job hunt can be quite a pain especially when you’re dependent on partners for whom you’re just a candidate, not more. Jobket made me lucky and most certainly gave me the professional side of guidance to the right
+                                            company most suited for my profile & compelete transparency of the process itself. I could talk to the team at any time and they supported my hunt.”</p>
+                                        <span></span>
+                                        <h4>Vivek Anand M</h4>
+                                        <h5>Digital Marketing Manager at Hyperconnect</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="media ">
+                                <div class="col-sm-3 col-12 mr-3 ml-4 text-center col-12 ">
+                                    <img src="./../../../assets/img/user-shadow.png " alt="Find Jobs" srcset="./../../../assets/img/user-shadow.png 2x,./../../../assets/img/user-shadow.png 3x " class="Bitmap ">
+                                    <img [src]="userImg2" alt="S.YogarajSenior Graphic Designer at Branding Pioneers"  class="pic_example ">
+                                </div>
+                                <div class="media-body col-sm-9 col-12 col-12 ">
+                                    <div class="testimonial-text ">
+                                        <p>During my search for a perfect jjob, Interviews with HR agencies were daunting and never resulted in job placement. But my search took a positive turn the day i registered with Jobket. From the moment I arrived,
+                                            it was clear that their qualified experts were commited to finding me a suitable place of employment . I would recommend Jobket to anyone who is serious and dedicated to finding the right job.</p>
+                                        <span></span>
+                                        <h4> S.Yogaraj</h4>
+                                        <h5>Senior Graphic Designer at Branding Pioneers</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="media">
+                                <div class="col-sm-3 col-12 mr-3 ml-4 text-center col-12 ">
+                                    <img src="./../../../assets/img/user-shadow.png " alt="Find Jobs" srcset="./../../../assets/img/user-shadow.png 2x,./../../../assets/img/user-shadow.png 3x " class="Bitmap ">
+                                    <img [src]="userImg3" alt="Omprakash Prajapati: Referrer on Jobket" class="pic_example ">
+                                </div>
+                                <div class="media-body col-sm-9 col-12 col-12 ">
+                                    <div class="testimonial-text ">
+                                        <p>I was surfing the web as usual when I saw a job opening that I thought would be right for my friend. I went to Jobket’s platform and was surprised to see such a huge reward price for simply referring my friend for the role.
+                                            And yes!! I have received a bonus of Rs.7000. I am very excited to have earned such a huge amount for helping a friend. Shared this with more friends and now they’re all so excited to help more friends!<span></span>
+                                        <h4>Omprakash Prajapati</h4>
+                                        <h5>Referrer on Jobket</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="media">
+                                <div class="col-sm-3 col-12 mr-3 ml-4 text-center col-12 ">
+                                    <img src="./../../../assets/img/user-shadow.png " alt="Find Jobs" srcset="./../../../assets/img/user-shadow.png 2x,./../../../assets/img/user-shadow.png 3x " class="Bitmap ">
+                                    <img [src]="userImg4" alt="Omprakash Prajapati: Referrer on Jobket"  class="pic_example ">
+                                </div>
+                                <div class="media-body col-sm-9 col-12 col-12 ">
+                                    <div class="testimonial-text ">
+                                        <p>Thank you so much for finding me the perfect job. Jobket listened to what I wanted and gave me fantastic advice. Throughout the whole process Jobket supported me & within two days I had a job offer. I am now very happy in my new job role and thank you so much. Infact , Jobket also gave me a joining bonus of Rs. 5000 since I was referred by my friend! So transparent and professional!
+                                            I would always happily recommend Jobket.<span></span>
+                                        <h4>Mr. Juned Patel</h4>
+                                        <h5>Technical Lead at HCL</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                                <div class="media">
+                                    <div class="col-sm-3 col-12 mr-3 ml-4 text-center col-12 ">
+                                        <img src="./../../../assets/img/user-shadow.png " alt="Find Jobs" srcset="./../../../assets/img/user-shadow.png 2x,./../../../assets/img/user-shadow.png 3x " class="Bitmap ">
+                                        <img [src]="userImg5" alt="Sales Manager at ValueFirst" class="pic_example ">
+                                    </div>
+                                    <div class="media-body col-sm-9 col-12 col-12 ">
+                                        <div class="testimonial-text ">
+                                            <p>Thank you Jobket for finding me the perfect job! The team at Jobket paid heed to what I was looking at in a job profile and gave me fantastic advice during the search. Within two days, my profile had been shared with this company and I was there for an interview.Throughout the whole process, Jobket supported me, stayed with me and checked on me about how the interview went, how was I feeling about the job, company and more. In the next two days, i had my job offer. Thank you Jobket for the professional and first class service! I am very happy in my new job role! I will always recommend Jobket to all my friends<span></span>
+                                            <h4>Shruti Dev </h4>
+                                            <h5>Sales Manager at ValueFirst Digital Media Pvt. Ltd.</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                    </div>
+                    <a class="carousel-control-prev " href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="" aria-hidden="true">
+              <img src="./../../../assets/img/left-arrow1.png" alt=".." class="im-1">
+              <img class="dis-none" src="./../../../assets/img/left-arrow.png" alt="..">
+            </span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next " href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="" aria-hidden="true">
+              <img src="./../../../assets/img/right-arrow.png" alt=".." class="dis-none">
+              <img src="./../../../assets/img/right-arrow1.png" class="im-1" alt=".." >
+            </span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pdtb-25 ">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-12 text-center ">
+                <div class="find-job ">
+                    <h2>Now, find your <span>perfect job</span> </h2>
+                    <a routerLink='/search-jobs' class="btn btn-green ">Search jobs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

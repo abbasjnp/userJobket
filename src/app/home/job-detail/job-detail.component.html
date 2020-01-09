@@ -1,0 +1,334 @@
+<section class="jobdetail-banner mt-105">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{jobDetail ?.title}} at {{jobDetail ?.company_name}}</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pdtb-30 mt-50 jd-detail">
+    <div class="container">
+        <div class="card job-detail">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="about-role-section">
+                            <h4 class="dis-none jd-h4">About this role</h4>
+                            <div class="row">
+                                <div class="col-sm-3 dis-none">
+                                    <div class="img-hldr">
+                                        <img class="image-holder" src="{{basepath}}{{jobDetail ?.comapny_logo}}" alt="..">
+                                    </div>
+                                </div>
+                                <div class="col-sm-9">
+                                    <div class="Company-detail ">
+                                        <div class="row">
+                                            <div class="col-sm-12 Company-detail-1">
+                                                <h2>{{jobDetail ?.title}}
+                                                        <span class="fa fa-check-circle tooltip">
+                                                                <span class="tooltiptext">verified job</span>
+                                                             </span>
+                                                </h2>
+                                                <h4 class="inline">{{jobDetail ?.company_name}}</h4>
+                                                <h6 class="inline"><span>|</span>{{jobDetail ?.posted_at}}</h6>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="row">
+                                            <div class="col-sm-12">
+                                                <span>
+                                                    <i class="fa fa-suitcase"></i>
+                                                    <h6 class="dis-inline">{{jobDetail ?.min_experience}} -
+                                                        {{jobDetail ?.max_experience}} Years</h6>
+                                                </span>
+                                                <span>
+                                                    <img src="./../../../assets/img/purse.png" alt="..">
+                                                    <h6 class="dis-inline"> ₹ {{jobDetail ?.min_salary/100000}} L -
+                                                        {{jobDetail ?.max_salary/100000}} L P.A</h6>
+                                                </span>
+                                                <span>
+                                                    <i class="fa fa-map-marker"></i>
+                                                    <h6 class="dis-inline">{{jobDetail ?.location}}</h6>
+                                                </span>
+                                            </div>
+                                        </div> -->
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <a class="btn btn-referal-reward">₹ {{jobDetail ?.referral_reward}} of
+                                                    Referral Reward</a>
+                                                <a class="btn btn-hiring-reward">₹ {{jobDetail ?.hiring_reward}} of
+                                                    Joining Bonus</a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <!-- <p>{{jobDetail ?.job_role}}</p> -->
+                                                <div class="row">
+                                                    <div class="col-sm-2 text-center">
+                                                        <div class="cir-1">
+                                                            <img src="./../../../assets/img/bag.png" alt="..">
+                                                            <h6>Experience</h6>
+                                                        </div>
+                                                        <h6 class="cir-h6">
+                                                            {{jobDetail ?.min_experience}}-{{jobDetail ?.max_experience}} Years
+                                                        </h6>
+                                                    </div>
+                                                    <div class="col-sm-2 text-center">
+                                                        <div class="cir-2">
+                                                            <img src="./../../../assets/img/wallet.png" alt="..">
+                                                            <h6>Salary</h6>
+                                                        </div>
+                                                        <h6 class="cir-h6">₹ {{jobDetail ?.min_salary/100000}} LPA~{{jobDetail ?.max_salary/100000}} LPA</h6>
+                                                    </div>
+                                                    <div class="col-sm-2 text-center">
+                                                        <div class="cir-3">
+                                                            <img src="./../../../assets/img/map.png" alt="..">
+                                                            <h6>Location</h6>
+                                                        </div>
+                                                        <h6 class="cir-h6">{{jobDetail ?.location}}</h6>
+                                                    </div>
+                                                    <div class="col-sm-2 text-center">
+                                                        <div class="cir-4">
+                                                            <img src="./../../../assets/img/person.png" alt="..">
+                                                            <h6>Employment<br> type</h6>
+                                                        </div>
+                                                        <h6 class="cir-h6">{{jobDetail ?.job_type}}</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- Refer this job start here -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="refer-job-heading">
+                                        <h3>Refer this job</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 refer-job">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="./../../../assets/img/share-1.png" alt="..">
+                                            <h6>Share</h6>
+                                            <p>Your referral code or a unique JD link</p>
+                                        </div>
+                                        <div class="col fa-caret">
+                                            <div>
+                                                <i class="fa fa-caret-right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <img src="./../../../assets/img/job2.png" alt="..">
+                                            <h6>Get hired</h6>
+                                            <p>Your friend gets hired</p>
+                                        </div>
+                                        <div class="col fa-caret">
+                                            <div>
+                                                <i class="fa fa-caret-right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <img src="./../../../assets/img/earn-1.png" alt="..">
+                                            <h6>Earn reward</h6>
+                                            <p>You earn a referral reward and your friend earns a joining bonus
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div (click)="referDialog(jobDetail,'refer')" class="refer-earn">
+                                        <h6>Refer & Earn <span>Rs {{jobDetail ?.referral_reward}}</span></h6>
+                                    </div>
+                                    <h6 class="job-referral">Learn more about <a routerLink="/referral">Job Referral
+                                        </a></h6>
+                                </div>
+                            </div>
+                            <!-- Refer this job end here -->
+                            <hr>
+                            <!-- key skills start here -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="Key-Skills">
+                                        <h3>Key Skills</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row Key-Skills-row">
+                                <div class="col" *ngFor="let skills of jobDetail ?.skills">
+                                    <div class="btn Key-Skills-btn">
+                                        <a>{{skills}}</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- key skills end here -->
+                            <hr>
+                            <!-- Description start here -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="job-description">
+                                        <h3>Company Profile</h3>
+                                        <ul class="company-profile">
+                                            <li [innerHTML]="jobDetail ?.company_detail"></li>
+                                        </ul>
+                                        <h3>Roles & Responsibilities</h3>
+                                        <ul>
+                                            <!-- {{jobDetail ?.description}} -->
+                                            <div [innerHTML]="jobDetail ?.description"></div>
+                                        </ul>
+                                        <h3>Required Qualifications</h3>
+                                        <ul class="company-profile" *ngFor="let requirements of jobDetail ?.job_requirements">
+                                            <li>{{requirements ?.requirement}}</li>
+                                        </ul>
+                                        <h3>Desired Qualifications</h3>
+                                        <ul class="company-profile" *ngFor="let qualifications of jobDetail ?.job_desired_requirements">
+                                            <li>{{qualifications ?.requirement}}</li>
+                                        </ul>
+                                        <h3>Salary</h3>
+                                        <ul class="company-profile">
+                                            <li>₹ {{jobDetail ?.min_salary/100000}} ~ {{jobDetail ?.max_salary/100000}} LPA
+                                            </li>
+                                        </ul>
+                                        <ul *ngIf="jobDetail?.salary_description" class="company-profile">
+                                            <li [innerHTML]="jobDetail ?.salary_description"></li>
+                                        </ul>
+                                        <h3>Location</h3>
+                                        <p>{{jobDetail ?.location}}</p>
+                                        <div class="col-md-12 map">
+                                            <agm-map id="map" [latitude]="lat" [longitude]="lng" [zoomControl]="false" [disableDoubleClickZoom]="true" [mapDraggable]="true">
+                                                <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                                            </agm-map>
+                                        </div>
+                                        <a class="view-map">View on google map</a>
+                                        <div class="text-right">
+                                            <a *ngIf="jobDetail ?.applied_status ==false" class="btn btn-apply"
+                                                (click)="applyDialog(jobDetail.job_id,'applyjob')">Apply for this job</a>
+                                            <a *ngIf="jobDetail ?.applied_status ==true"
+                                                class="btn btn-apply">Applied</a>
+                                            <a class="btn btn-refer" (click)="referDialog(jobDetail,'refer')">Refer & Earn</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Description end here -->
+                            <hr class="hr-1">
+                            <div class="row">
+                                <div class="col-md-12 verified-job">
+                                    <div class="dis-none">
+                                    <h2>
+                                        <span class="fa fa-check-circle"></span>
+                                        Verified by Jobket
+                                    </h2>
+                                    <p>This job profile is directly posted and managed by Jobket talent acquisition team. Jobket only offers duly verified 
+                                            jobs from good companies that have been carefully curated.</p>
+                                        </div>
+                                            <mat-expansion-panel [(ngModel)]="data" 
+                                            [expanded]="data" ngDefaultControl>
+                                        
+                                            <mat-expansion-panel-header>
+                                                    <h2> <span class="fa fa-check-circle"></span>
+                                                Verified by Jobket </h2>
+                                            </mat-expansion-panel-header>
+                                            <p>This job profile is directly posted and managed by Jobket talent acquisition team. Jobket only offers duly verified 
+                                                jobs from good companies that have been carefully curated.</p>
+                                        </mat-expansion-panel>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="card job-box" *ngFor="let allJobsData of allJobsDAtas"> -->
+        <h3>Similar Jobs</h3>
+        <div class="card job-box" *ngFor="let allJobsData of jobsList">
+            <div class="card-body" (click)="jobDetailsPage(allJobsData.job_id,allJobsData.designation,allJobsData)">
+                <div class="row">
+                    <div class="col-sm-7 col-7">
+                        <a>
+                            <h3>{{allJobsData.designation}}
+                                    <span class="fa fa-check-circle tooltip">
+                                            <span class="tooltiptext">verified job</span>
+                                         </span>  
+                            </h3>
+                        </a>
+                        <h4 class="inline">{{allJobsData.company_name}}</h4>
+                        <h6 class="inline"><span>|</span>{{allJobsData.posted_at}}</h6>
+                    </div>
+                    <div class="col-sm-5 col-5">
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="rewards">
+                                    <h4>Joining Bonus</h4>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="rewards1">
+                                    <h4>Rs {{allJobsData.hiring_reward}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="rewards">
+                                    <h4>Referral Reward</h4>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="rewards1">
+                                    <h4>Rs {{allJobsData.referral_reward}}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-10 col-8">
+                        <span class="briefcase">
+                            <i class="fa fa-briefcase"></i>
+                            <h4>{{allJobsData.experience}}</h4>
+                        </span>
+                        <span class="location">
+                            <i class="fa fa-map-marker"></i>
+                            <h4>{{allJobsData.location}}</h4>
+                        </span>
+                        <div class="mob-btn">
+                                <a class="btn btn-refer"> View Details</a>
+                            </div>
+                    </div>
+                            
+                </div>
+                <div class="row ">
+                    <div class="col-md-8 mt-10 dis-none">
+                        <p *ngIf="allJobsData.company_detail" class="text" [innerHTML]="allJobsData.company_detail | ellipsis: 100"></p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="apply-now">
+                            <a class="btn btn-apply" *ngIf="allJobsData.applied_status ==false">Apply Now</a>
+                            <a class="btn btn-apply" *ngIf="allJobsData.applied_status ==true">Applied</a>
+                            <a class="btn btn-refer"> Refer Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <!-- <div class="view-more">
+            <a routerLink='/search-jobs'>View more jobs</a>
+        </div> -->
+        <div *ngIf="total_pages>count">
+            <button class="view-more" (click)="showMoreJobs()">
+                View more jobs
+                <!-- <a (click)="showMoreJobs()" *ngIf="total_pages<count">No more jobs</a> -->
+            </button>
+        </div>
+    </div>
+</section>
+<!-- <ngx-json-ld [json]="schema"></ngx-json-ld> -->

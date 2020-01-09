@@ -1,0 +1,172 @@
+<div mat-dialog-content >
+    <!-- This dialog will be open when user is Logged in -->
+    <section *ngIf="token">
+        <div class="row">
+            <div class="col-sm-5 dis-none">
+                <div class="signup-sec-1 ">
+                   <div class="text-center">
+                    <img src="./../../../assets/img/refer-1.png" alt=".." class="w-100">
+                    <h4>Refer this job and earn <span>Rs {{shareJob.data.referral_reward}}</span></h4>
+                   </div>
+                </div>
+            </div>
+            <div class="col-sm-7 col-12 pd">
+                    <div class="modal-header">
+                        
+                            <h4 class="modal-title">Refer and Earn</h4>
+                            <button type="button" class="close" (click)="closeDialog()">&times;</button>
+                        </div>
+                        <div class="modal-body refer-now">
+                            <div class="row">
+                                <div class="col-sm-12  ">
+                                    <div class="row">
+                                    <h3>Refer by SNS</h3>
+                                    <!-- <h5>Write SNS post with pre-defined message + link</h5> -->
+                                </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-12  link-text">
+                                    <h4>1. Copy your referral code</h4>
+                                    <div class="input-group mb-3">
+                                        <input type="text" name="foo1"  class="form-control" value="{{referral_code}}" id="refferal">
+                                        
+                                        <!-- <input type="text" class="form-control" value="{{copyLink}}" id="myInput"> -->
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" (click)="copyLinkToClipboard('refferal')">
+                                                <i class="fa fa-copy"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-12 link-text">
+                                    <h4>2. Select channel & paste referral code</h4>
+                                    <ul>
+                                        <li>
+                                            <a (click)="shareOnFB()">
+                                                <img src="./../../../assets/img/facebook.png" alt="..">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a (click)="shareOnLinkedIn()">
+                                                <img src="./../../../assets/img/linkedin.png" alt="..">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a (click)="shareOnWhatsApp()">
+                                                <img src="./../../../assets/img/whatsapp.png" alt="..">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                   
+                                </div>
+                            </div>
+                            <div class="seprator row">
+                                <h6>OR</h6>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-12 link-text">
+                                    <h5>Refer by copying URL & referral code</h5>
+                                    <div class="input-group mb-3">
+                                        <textarea type="text" name="foo1"  class="form-control" value="{{copyLink}}" id="myInput">
+
+                                        </textarea>
+                                        <!-- <input type="text" name="foo1"  class="form-control" value="{{copyLink}}" id="myInput"> -->
+                                        
+                                        <!-- <input type="text" class="form-control" value="{{copyLink}}" id="myInput"> -->
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" (click)="copyLinkToClipboard('link')">
+                                                <i class="fa fa-copy"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="col-sm-12">
+                                    <img src="./../../../assets/img/refer_now.png" alt="Refer Now" style="width: 100%">
+                                </div>
+                            </div> -->
+                        </div>
+            </div>
+        </div>
+       
+    </section>
+
+    <!-- This dialog will be open when user is NOT Logged in -->
+    <!-- <section *ngIf="!token">
+        <div class="modal-header mdlhdr">
+            <button type="button" class="close" (click)="closeDialog()">&times;</button>
+        </div>
+        <div class="modal-body refer-now">
+            <div class="row">
+                <div class="col-sm-6 col-12">
+                    <h2 class="mdlhdr">Sign Up and Earn upto Rs.1,00,000!</h2>
+                    <h2 class="mdlftr">Sign Up and Get!</h2>
+                    <h3 class="mdlftr text-orange">Rs. 1,00,000 <sub>MAX</sub></h3>
+                    <h5>Know someone suitable for this profile? Share your unique referral link and earn a huge referral reward!
+                    </h5>
+
+                </div>
+                <div class="col-sm-6 col-12 rodis">
+                    <div class="mt-5">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <img src="./../../../assets/img/facebook.png" alt="..">
+                                <a (click)="socialLogin('facebook')" class="btn btn-facebook">Refer with Facebook</a>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <img src="./../../../assets/img/linkedin.png" alt="..">
+                                <a href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81p8cjl7pehohx&redirect_uri=https://jobket.in/account/login/auth/linkedin&state=987654621&scope=r_liteprofile%20r_emailaddress%20w_member_social" class="btn btn-linkedin">Refer with Linkedin</a>
+                            </div>
+                            <div class="col-sm-12 mt-3">
+                                <img src="./../../../assets/img/google-plus.png" alt="..">
+                                <a (click)="socialLogin('google')" class="btn btn-whatsapp">Refer with Google</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="refer-now displ">
+                <div class="row mt-4">
+                    <div class="col-sm-12 text-center ">
+                        <h3>Refer with SNS Account</h3>
+                        <h5>Start referral by one-click social sign up</h5>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-sm-12 col-12">
+                        <ul>
+                            <li>
+                                <a (click)="shareOnFB()">
+                                    <img src="./../../../assets/img/facebook.png" alt="..">
+                                </a>
+                            </li>
+                            <li>
+                                <a (click)="shareOnLinkedIn()">
+                                    <img src="./../../../assets/img/linkedin.png" alt="..">
+                                </a>
+                            </li>
+                            <li>
+                                <a (click)="shareOnWhatsApp()">
+                                    <img src="./../../../assets/img/google-plus.png" alt="..">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="modal-footer mdlftr">
+            <button type="button" class="close" (click)="closeDialog()">&times;</button>
+        </div>
+    </section> -->
+
+
+
+</div>
